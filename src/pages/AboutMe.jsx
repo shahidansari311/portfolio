@@ -3,7 +3,7 @@ import React from 'react'
 const AboutMe = () => {
   return (
     <section className="w-full">
-      <h2 className='title text-3xl font-bold place-self-center mt-10 underline underline-offset-8 decoration-blue-500 drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] transition'>
+      <h2 className='title text-3xl font-bold place-self-center mt-10 underline underline-offset-8 decoration-blue-500 drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]'>
         About Me
       </h2>
        <div className="max-w-5xl mx-auto mt-10 px-6">
@@ -12,7 +12,7 @@ const AboutMe = () => {
             <img
               src="myimg.jpeg"
               alt="Shahid Ansari"
-              className="h-[260px] w-[300px] rounded-full border-6 border-black shadow-md object-cover shadow-white"
+              className="h-[260px] w-[300px] rounded-full object-cover drop-shadow-[0_0_8px_rgba(60,189,248,1.5)]"
             />
           </div>
 

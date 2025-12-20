@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <>
     <div className='main p-5 flex justify-around'>
-        <div className="logo font-bold text-2xl">
+        <div className="font-bold text-2xl tracking-wide text-white drop-shadow-[0_0_8px_rgba(56,189,248,1.3)] cursor-pointer">
             Shahid &lt;/&gt;
         </div>
         <div className="nav">

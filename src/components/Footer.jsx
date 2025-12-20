@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className='p-5'>
     <hr className='text-gray-800 ml-10 mr-10 '/>
-    <div className="main text-[10px] flex justify-around pt-2">
+    <div className="main text-[15px] flex justify-around pt-2">
         <div className="logo font-bold">
             &lt; Shahid /&gt;
         </div>
@@ -16,7 +16,7 @@ const Footer = () => {
             </ul>
         </div>    
     </div>
-    <div className='copy text-[9px] place-self-center'>
+    <div className='copy text-[12px] place-self-center mt-4'>
         &copy; All rights reserved Shahid
     </div>    
     </div>
