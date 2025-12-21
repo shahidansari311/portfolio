@@ -1,4 +1,5 @@
 import React from 'react'
+import SocialLinks from '../components/Sociallinks'
 
 const Hero = () => {
   return (
@@ -10,6 +11,7 @@ const Hero = () => {
             <h5>Computer Science student at ABES Engineering College.
                 <br />
             I build scalable full-stack applications using React, Node.js, and Express.</h5>
+            <div className='mt-2'><SocialLinks size={22}/></div>
             <button className='mt-3 pl-3 pr-3 pt-2 pb-2 rounded-[20px] bg-blue-700 font-bold text-md hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] drop-shadow-[0_0_8px_rgba(56,189,248,0.5)] transition'> Download CV </button>
             <button className='mt-3 pl-3 pr-3 pt-2 pb-2 rounded-[20px] bg-blue-700 font-bold text-md hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] drop-shadow-[0_0_8px_rgba(56,189,248,0.5)] transition ml-3'> Hire Me </button>
         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import SocialLinks from './Sociallinks'
 
 const Footer = () => {
   return (
@@ -6,7 +7,8 @@ const Footer = () => {
     <hr className='text-gray-800 ml-10 mr-10 '/>
     <div className="main text-[15px] flex justify-around pt-2">
         <div className="logo font-bold">
-            &lt; Shahid Ansari /&gt;
+            &lt; Shahid Ansari /&gt;<div className='mt-2'>
+            <SocialLinks size={18}/></div>
         </div>
         <div className='contact-info'>
             <ul style={{listStyle:"disc"}}>
