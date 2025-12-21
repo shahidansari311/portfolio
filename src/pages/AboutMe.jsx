@@ -6,7 +6,7 @@ const AboutMe = () => {
       <h2 className='title text-3xl font-bold place-self-center mt-10 underline underline-offset-8 decoration-blue-500 drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]'>
         About Me
       </h2>
-       <div className="max-w-5xl mx-auto mt-10 px-6">
+      <div className="max-w-5xl mx-auto mt-10 px-6">
         <div className="flex justify-between items-center gap-20 flex-wrap">
           <div>
             <img
@@ -26,6 +26,20 @@ const AboutMe = () => {
             <p>
               Alongside development, I actively practice problem-solving and continuously improve my technical skills through projects and hands-on learning.
             </p>
+            <div className="flex gap-4">
+              <button className="px-5 py-2 rounded-full border border-cyan-400 text-cyan-400
+                     hover:bg-cyan-400 hover:text-black
+                     transition duration-300">
+                Web Development
+              </button>
+
+              <button className="px-5 py-2 rounded-full border border-purple-400 text-purple-400
+                     hover:bg-purple-400 hover:text-black
+                     transition duration-300">
+                Problem Solving
+              </button>
+            </div>
+
           </div>
         </div>
       </div>
