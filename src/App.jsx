@@ -1,7 +1,7 @@
 import React from "react";
+import SplashCursor from './components/SplashCursor'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Background from "./components/Background";
 import Hero from "./pages/Hero";
 import AboutMe from "./pages/AboutMe";
 import MySkills from "./pages/MySkills";
@@ -13,8 +13,8 @@ import Contact from "./pages/Contact";
 
 const App = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[#05010d]">
-      <Background/>
+    <div className="min-h-screen w-full overflow-x-hidden absolute inset-0 -z-10 h-full items-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+      <SplashCursor />
       <div className="relative z-10 text-white">
         <Navbar/>
         <Hero/>

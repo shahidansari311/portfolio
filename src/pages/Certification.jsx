@@ -21,7 +21,7 @@ const Certification = () => {
 ];
 
   return (
-    <section className='w-full mt-20'>
+    <section className='w-full mt-20' id="cert">
       <h2 className='title text-3xl font-bold place-self-center mt-10 underline underline-offset-8 decoration-blue-500 drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]'>
         Certifications
        <span className="mt-2 h-1 w-20 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600"></span>

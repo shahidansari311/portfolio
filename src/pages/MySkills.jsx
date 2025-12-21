@@ -3,7 +3,7 @@ import Card from '../components/Card'
 
 const MySkills = () => {
   return (
-    <section className="w-full mt-20">
+    <section className="w-full mt-20" id='skills'>
       
       <h2 className="text-3xl font-bold text-center underline underline-offset-8 decoration-blue-500 drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]">
         My Skills

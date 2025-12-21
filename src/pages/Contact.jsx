@@ -7,7 +7,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-full mt-28 px-6">
+    <section className="w-full mt-28 px-6 " id="contact">
       
       <div className="flex flex-col items-center">
         <h2 className="text-3xl font-bold text-white drop-shadow-[0_0_10px_rgba(56,189,248,0.8)]">
