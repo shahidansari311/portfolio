@@ -5,6 +5,7 @@ import Background from "./components/Background";
 import Hero from "./pages/Hero";
 import AboutMe from "./pages/AboutMe";
 import MySkills from "./pages/MySkills";
+import TechMarquee from "./components/TechMarquee";
 import MyProjects from "./pages/MyProjects";
 import Otherprofiles from "./pages/Otherprofiles";
 import Certification from "./pages/Certification";
@@ -19,6 +20,7 @@ const App = () => {
         <Hero/>
         <AboutMe/>
         <MySkills/>
+        <TechMarquee />
         <MyProjects/>
         <Otherprofiles/>
         <Certification/>
