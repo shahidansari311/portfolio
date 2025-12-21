@@ -17,6 +17,11 @@ const Certification = () => {
           <h2 className='mb-2'>Issuing authority</h2>
           <a href="" className='border-2 rounded-4xl bg-blue-800 font-bold px-2 py-1'>Link</a>
         </div>
+        <div className="cert1 border-2 h-auto w-80 rounded-4xl px-10 py-6">
+          <h1 className='text-2xl font-bold '>Name</h1>
+          <h2 className='mb-2'>Issuing authority</h2>
+          <a href="" className='border-2 rounded-4xl bg-blue-800 font-bold px-2 py-1'>Link</a>
+        </div>
       </div>
     </section>
   )
