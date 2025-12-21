@@ -1,6 +1,7 @@
 import React from "react";
 
-const ProjectCard = ({ title, image, tech = [], desc }) => {
+const ProjectCard = ({ title, image, tech = [], desc ,liveLink,
+  githubLink,}) => {
   return (
     <div
       className="
@@ -18,7 +19,6 @@ const ProjectCard = ({ title, image, tech = [], desc }) => {
         hover:shadow-red-500/30
       "
     >
-      {/* Image */}
       <div className="overflow-hidden rounded-xl">
         <img
           src={image}
@@ -32,13 +32,11 @@ const ProjectCard = ({ title, image, tech = [], desc }) => {
         />
       </div>
 
-      {/* Content */}
       <div className="p-4 space-y-3">
         <h2 className="text-xl font-semibold text-white">
           {title}
         </h2>
 
-        {/* Tech stack */}
         <ul className="flex flex-wrap gap-2">
           {tech.map((item, index) => (
             <li
@@ -57,10 +55,46 @@ const ProjectCard = ({ title, image, tech = [], desc }) => {
           ))}
         </ul>
 
-        {/* Description */}
         <p className="text-sm text-gray-300 leading-relaxed">
           {desc}
         </p>
+        <div className="mt-4 flex gap-3">
+          {liveLink && (
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex-1 text-center
+                px-4 py-2 rounded-xl
+                text-sm font-semibold
+                bg-gradient-to-r from-red-500 to-pink-600
+                text-white
+                transition hover:opacity-90
+              "
+            >
+              Live Demo
+            </a>
+          )}
+
+          {githubLink && (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex-1 text-center
+                px-4 py-2 rounded-xl
+                text-sm font-semibold
+                border border-white/20
+                text-white
+                transition hover:bg-white/10
+              "
+            >
+              GitHub
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
