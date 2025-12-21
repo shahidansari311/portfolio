@@ -11,6 +11,7 @@ const Hero = () => {
                 <br />
             I build scalable full-stack applications using React, Node.js, and Express.</h5>
             <button className='mt-3 pl-3 pr-3 pt-2 pb-2 rounded-[20px] bg-blue-700 font-bold text-md hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] drop-shadow-[0_0_8px_rgba(56,189,248,0.5)] transition'> Download CV </button>
+            <button className='mt-3 pl-3 pr-3 pt-2 pb-2 rounded-[20px] bg-blue-700 font-bold text-md hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] drop-shadow-[0_0_8px_rgba(56,189,248,0.5)] transition ml-3'> Hire Me </button>
         </div>
         <div className="right mr-20">
             <img src="avatar.png" alt="" className='avatar mt-[-100px] h-[300px] drop-shadow-[0_0_8px_rgba(56,189,248,0.6)]'/>

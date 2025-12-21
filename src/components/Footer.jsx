@@ -6,7 +6,7 @@ const Footer = () => {
     <hr className='text-gray-800 ml-10 mr-10 '/>
     <div className="main text-[15px] flex justify-around pt-2">
         <div className="logo font-bold">
-            &lt; Shahid /&gt;
+            &lt; Shahid Ansari /&gt;
         </div>
         <div className='contact-info'>
             <ul style={{listStyle:"disc"}}>
@@ -17,7 +17,7 @@ const Footer = () => {
         </div>    
     </div>
     <div className='copy text-[12px] place-self-center mt-4'>
-        &copy; All rights reserved Shahid
+        &copy; All rights reserved
     </div>    
     </div>
   )

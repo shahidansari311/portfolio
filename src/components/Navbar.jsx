@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="font-bold text-2xl tracking-wide text-white drop-shadow-[0_0_8px_rgba(56,189,248,1.3)] cursor-pointer">
             Shahid &lt;/&gt;
         </div>
-        <div className="nav">
+        <div className="nav drop-shadow-[0_0_2px_rgba(56,189,248,1.5)]">
             <ul className='flex gap-5'>
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
