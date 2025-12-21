@@ -1,10 +1,32 @@
 import React from "react";
+import emailjs from "emailjs-com";
+import toast from "react-hot-toast";
+import { useState } from "react";
+
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted");
-  };
+  e.preventDefault();
+  setLoading(true);
+
+  emailjs
+    .sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      e.target,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      toast.success("Message sent successfully 🚀");
+      e.target.reset();
+    })
+    .catch(() => {
+      toast.error("Failed to send message ❌");
+    })
+    .finally(() => setLoading(false));
+};
 
   return (
     <section className="w-full mt-28 px-6 " id="contact">

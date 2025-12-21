@@ -3,6 +3,7 @@ import SplashCursor from './components/SplashCursor'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./pages/Hero";
+import { Toaster } from "react-hot-toast";
 import AboutMe from "./pages/AboutMe";
 import MySkills from "./pages/MySkills";
 import TechMarquee from "./components/TechMarquee";
@@ -16,6 +17,7 @@ const App = () => {
     <div className="min-h-screen w-full overflow-x-hidden absolute inset-0 -z-10 h-full items-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
       <SplashCursor />
       <div className="relative z-10 text-white">
+        <Toaster position="top-center" />
         <Navbar/>
         <Hero/>
         <AboutMe/>
