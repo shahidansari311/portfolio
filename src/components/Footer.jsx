@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='p-5'>
     <hr className='text-gray-800 ml-10 mr-10 '/>
-    <div className="main text-[15px] flex justify-around pt-2">
+    <div className="main lg:text-[15px] flex justify-around pt-2 text-[8px]">
         <div className="logo font-bold">
             &lt; Shahid Ansari /&gt;<div className='mt-2'>
             <SocialLinks size={18}/></div>

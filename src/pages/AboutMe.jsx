@@ -7,7 +7,7 @@ const AboutMe = () => {
         About Me
       </h2>
        <div className="max-w-5xl mx-auto mt-10 px-6">
-        <div className="flex justify-between items-center gap-20">
+        <div className="flex justify-between items-center gap-20 flex-wrap">
           <div>
             <img
               src="myimg.jpeg"

@@ -4,7 +4,7 @@ import SocialLinks from '../components/Sociallinks'
 const Hero = () => {
   return (
     <div className='main p-6 flex justify-between self-center mt-18'>
-        <div className="left ml-10 ">
+        <div className="left md:ml-10  ">
             <h1 className='text-5xl font-bold drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] transition'>Hi , I'm Shahid</h1>
             <br />
             <h3 className='text-2xl'>WEB DEVELOPER</h3>
@@ -15,7 +15,7 @@ const Hero = () => {
             <button className='mt-3 pl-3 pr-3 pt-2 pb-2 rounded-[20px] bg-blue-700 font-bold text-md hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] drop-shadow-[0_0_8px_rgba(56,189,248,0.5)] transition'> Download CV </button>
             <button className='mt-3 pl-3 pr-3 pt-2 pb-2 rounded-[20px] bg-blue-700 font-bold text-md hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] drop-shadow-[0_0_8px_rgba(56,189,248,0.5)] transition ml-3'> Hire Me </button>
         </div>
-        <div className="right mr-20">
+        <div className="right mr-20 hidden md:flex">
             <img src="avatar.png" alt="" className='avatar mt-[-100px] h-[300px] drop-shadow-[0_0_8px_rgba(56,189,248,0.6)]'/>
         </div>
     </div>
