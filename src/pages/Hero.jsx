@@ -13,7 +13,7 @@ const Hero = () => {
             I build scalable full-stack applications using React, Node.js, and Express.</h5>
             <div className='mt-2'><SocialLinks size={22}/></div>
              <button
-          onClick={() => window.open("/Shahid_Ansari_CV.pdf", "_blank")}
+          onClick={() => window.open("https://drive.google.com/file/d/1FDpIT94LN8apqKe12ALjekjDWQgPz84e/view?usp=sharing", "_blank")}
           className="
           mt-3 mr-3
             px-5 py-2
