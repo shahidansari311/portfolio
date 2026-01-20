@@ -11,11 +11,13 @@ import MyProjects from "./pages/MyProjects";
 import Otherprofiles from "./pages/Otherprofiles";
 import Certification from "./pages/Certification";
 import Contact from "./pages/Contact";
+import Particles from "./components/Background";
 
 const App = () => {
   return (
     <div className="min-h-screen w-full overflow-x-hidden absolute inset-0 -z-10 h-full items-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
       <SplashCursor />
+      <Particles/>
       <div className="relative z-10 text-white">
         <Toaster position="top-center" />
         <Navbar/>

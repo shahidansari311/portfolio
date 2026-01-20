@@ -1,4 +1,5 @@
 import React from 'react'
+import Timeline from '../components/Timeline'
 
 const AboutMe = () => {
   return (
@@ -16,7 +17,7 @@ const AboutMe = () => {
             />
           </div>
 
-          <div className="max-w-xl space-y-4 text-gray-300">
+          <div className="max-w-xl space-y-2 text-gray-300">
             <p>
               I’m Shahid Ansari, a Computer Science student at ABES Engineering College with a strong interest in full-stack web development.
             </p>
@@ -26,6 +27,7 @@ const AboutMe = () => {
             <p>
               Alongside development, I actively practice problem-solving and continuously improve my technical skills through projects and hands-on learning.
             </p>
+            <Timeline/>
             <div className="flex gap-4">
               <button className="px-5 py-2 rounded-full border border-cyan-400 text-cyan-400
                      hover:bg-cyan-400 hover:text-black
@@ -36,7 +38,7 @@ const AboutMe = () => {
               <button className="px-5 py-2 rounded-full border border-purple-400 text-purple-400
                      hover:bg-purple-400 hover:text-black
                      transition duration-300">
-                Problem Solving
+                Problem Solver
               </button>
             </div>
 
