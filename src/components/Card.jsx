@@ -1,4 +1,4 @@
-const Card = ({ name, children ,skills }) => {
+const Card = ({ name, children, skills }) => {
   return (
     <div
       className="
@@ -34,8 +34,11 @@ const Card = ({ name, children ,skills }) => {
 
       <div className="text-sm text-gray-300 space-y-2">
         <div className="flex flex-wrap gap-2 mt-4">
-          {skills.map(skill => (
-            <span className="px-3 py-1 text-sm rounded-full bg-white/10 border border-white/20">
+          {skills.map((skill, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 text-sm rounded-full bg-white/10 border border-white/20"
+            >
               {skill}
             </span>
           ))}

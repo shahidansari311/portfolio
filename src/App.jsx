@@ -17,7 +17,18 @@ const App = () => {
   return (
     <div className="min-h-screen w-full overflow-x-hidden absolute inset-0 -z-10 h-full items-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
       <SplashCursor />
-      <Particles/>
+      <div className="fixed inset-0 z-0 pointer-events-none">
+          <Particles 
+             particleColors={['#ffffff', '#ffffff']}
+             particleCount={200}
+             particleSpread={10}
+             speed={0.1}
+             particleBaseSize={100}
+             moveParticlesOnHover={true}
+             alphaParticles={false}
+             disableRotation={false}
+          />
+      </div>
       <div className="relative z-10 text-white">
         <Toaster position="top-center" />
         <Navbar/>
