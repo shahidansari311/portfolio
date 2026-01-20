@@ -1,5 +1,4 @@
 import React from "react";
-import SplashCursor from './components/SplashCursor'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./pages/Hero";
@@ -12,11 +11,12 @@ import Otherprofiles from "./pages/Otherprofiles";
 import Certification from "./pages/Certification";
 import Contact from "./pages/Contact";
 import Particles from "./components/Background";
+import TargetCursor from "./components/SplashCursor";
 
 const App = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden absolute inset-0 -z-10 h-full items-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
-      <SplashCursor />
+    <div className="min-h-screen w-full overflow-x-hidden absolute inset-0 -z-10 h-full items-center [background:radial-gradient(185%_185%_at_50%_10%,#000_40%,#63e_100%)]">
+      <TargetCursor />
       <div className="fixed inset-0 z-0 pointer-events-none">
           <Particles 
              particleColors={['#ffffff', '#ffffff']}
