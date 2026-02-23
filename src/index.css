@@ -1,55 +1,162 @@
 @import "tailwindcss";
 
+:root {
+  --primary: #6366f1;
+  --secondary: #a855f7;
+  --accent: #22d3ee;
+  --bg-dark: #030712;
+  --card-bg: rgba(255, 255, 255, 0.02);
+}
+
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--bg-dark);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  border-radius: 10px;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: #f8fafc;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4 {
+h1, .font-sync {
+  font-family: 'Syncopate', sans-serif;
+  letter-spacing: -0.05em;
+}
+
+h2, h3, h4, .font-space {
   font-family: 'Space Grotesk', sans-serif;
 }
 
-.input {
-  @apply w-full px-4 py-3 rounded-xl bg-transparent border border-white/20
-         text-white placeholder-gray-500 focus:outline-none
-         focus:border-cyan-400 transition;
+/* Stunning Glass Effects */
+@utility glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+@utility glass-pill {
+  @apply glass rounded-full border border-white/10;
+}
 
+@utility glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px -20px rgba(99, 102, 241, 0.3);
+}
+
+/* Typography Enhancements */
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-indigo-500 via-purple-500 to-cyan-400;
+  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.3));
+}
+
+@utility text-gradient-alt {
+  @apply bg-clip-text text-transparent bg-linear-to-br from-cyan-400 to-blue-600;
+}
+
+/* Visual Candy */
+.glow-mesh {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.glow-orb {
+  @apply absolute rounded-full blur-[120px] opacity-20 animate-float;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+/* Utility Animations */
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@utility animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.1); }
+}
+
+@utility animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.animate-scroll {
-  animation: scroll 10s linear infinite;
+@utility animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
 }
 
-.animate-scroll:hover {
-  animation-play-state: paused;
+/* Responsiveness Improvements */
+.section-padding {
+  @apply py-28 px-12;
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
+@media (max-width: 640px) {
+  h1 { @apply text-4xl; }
+  .section-padding {
+    @apply py-16 px-4;
   }
-  100% {
-    transform: translateX(-50%);
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 { @apply text-5xl; }
+  .section-padding {
+    @apply py-20 px-8;
   }
 }
 
-.animate-marquee {
-  animation: marquee 30s linear infinite;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
+@media (min-width: 1025px) {
+  h1 { @apply text-7xl; }
+  .section-padding {
+    @apply py-28 px-12;
+  }
 }
 

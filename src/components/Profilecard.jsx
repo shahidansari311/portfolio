@@ -21,13 +21,22 @@ const Profilecard = ({ handle, platform, link }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="min-w-[220px] p-5 rounded-2xl border border-white/20 bg-black/40 backdrop-blur-md hover:scale-105 transition flex flex-col gap-3"
+      className="glass-card min-w-[240px] p-6 rounded-2xl flex items-center gap-4 transition-all duration-300"
     >
-      <div className="text-3xl">{iconMap[platform]}</div>
+      <div className="text-3xl p-3 bg-white/5 rounded-xl group-hover:bg-indigo-500/20 transition-colors">
+        {iconMap[platform]}
+      </div>
 
-      <h3 className="text-lg font-semibold">{platform}</h3>
-
-      <p className="text-sm text-white/70">@{handle}</p>
+      <div>
+        <h3 className="text-sm font-bold text-white tracking-wide uppercase">{platform}</h3>
+        <p className="text-xs text-slate-400 mt-0.5">@{handle}</p>
+      </div>
+      
+      <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </div>
     </a>
   );
 };
