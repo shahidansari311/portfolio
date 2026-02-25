@@ -9,22 +9,22 @@ const MyProjects = () => {
       desc: "Scatch is a full-stack e-commerce web application designed for selling premium bags with a smooth and secure user experience. Features include user authentication, product listings, image uploads, and admin panel.",
       tech: ["Node.js", "Express.js", "MongoDB", "JWT", "Tailwind"],
       liveLink: "https://scatch-8fya.onrender.com/",
-      githubLink: "https://github.com/shahidansari310/Scatch"
+      githubLink: "https://github.com/shahidansari311/Scatch"
     },
     {
       title: 'Weather Dashboard',
       image: '/weather.png',
       desc: "A responsive web application providing real-time weather information and 5-day forecasts. Integrates OpenWeather API with a clean, mobile-first interface.",
       tech: ["React", "API Handling", "Tailwind", "JavaScript"],
-      liveLink: "https://weather-app-ivory-beta-96.vercel.app/",
-      githubLink: "https://github.com/shahidansari310/Weather-App"
+      liveLink: "https://weather-app-drab-one-53.vercel.app/",
+      githubLink: "https://github.com/shahidansari311/Weather-App"
     },
     {
-      title: 'AI Resume Analyzer',
+      title: 'Portfolio',
       image: '/portfolio.png',
       desc: "Modern developer portfolio featuring advanced animations, glassmorphism, and responsive design concepts to showcase professional work and skills.",
       tech: ["React", "GSAP", "Tailwind", "Framer"],
-      githubLink: "https://github.com/shahidansari310/portfolio"
+      githubLink: "https://github.com/shahidansari311/portfolio"
     }
   ];
 
@@ -45,7 +45,7 @@ const MyProjects = () => {
 
       <div className="mt-16 text-center">
         <a 
-          href="https://github.com/shahidansari310" 
+          href="https://github.com/shahidansari311" 
           target="_blank" 
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 glass rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-all"

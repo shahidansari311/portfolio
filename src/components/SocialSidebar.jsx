@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const SocialSidebar = () => {
   const socials = [
-    { icon: FaGithub, href: "https://github.com/shahidansari310", color: "hover:text-white" },
+    { icon: FaGithub, href: "https://github.com/shahidansari311", color: "hover:text-white" },
     { icon: FaLinkedin, href: "https://www.linkedin.com/in/shahidansari-/", color: "hover:text-blue-400" },
     { icon: FaTwitter, href: "https://x.com/Shahid_310_", color: "hover:text-cyan-400" },
     { icon: FaInstagram, href: "https://www.instagram.com/_shahid_129_/", color: "hover:text-pink-400" },

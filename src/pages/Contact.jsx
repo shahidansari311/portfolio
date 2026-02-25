@@ -110,7 +110,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Email</p>
-                    <p className="text-white font-bold text-base md:text-lg overflow-hidden text-ellipsis">shahidansari310@gmail.com</p>
+                    <p className="text-white font-bold text-base md:text-lg overflow-hidden text-ellipsis">shahidansari945256@gmail.com</p>
                   </div>
                 </div>
 

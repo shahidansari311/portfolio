@@ -4,7 +4,7 @@ const SocialLinks = ({size,p}) => {
   return (
     <ul className="flex gap-2">
       <li className="p-2 rounded-xl bg-white/10 hover:bg-white/20 transition">
-        <a href="https://github.com/shahidansari310" target="_blank">
+        <a href="https://github.com/shahidansari311" target="_blank">
           <FaGithub size={size} />
         </a>
       </li>

@@ -44,8 +44,8 @@ const Footer = () => {
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-500">Contact</h4>
             <div className="space-y-4">
               <p className="text-sm font-bold text-slate-300">Ghaziabad, Uttar Pradesh, India</p>
-              <a href="mailto:shahidansari310@gmail.com" className="text-sm font-bold text-indigo-400 hover:text-indigo-300 transition-colors block">
-                shahidansari310@gmail.com
+              <a href="mailto:shahidansari945256@gmail.com" className="text-sm font-bold text-indigo-400 hover:text-indigo-300 transition-colors block">
+                shahidansari945256@gmail.com
               </a>
             </div>
           </div>
