@@ -3,9 +3,9 @@ import { SiLeetcode, SiGeeksforgeeks, SiCodechef, SiCodeforces, SiHackerrank, Si
 
 // ---------- Data (pulled straight from your Codolio profile) ----------
 const topStats = [
-  { label: 'Total Questions', value: '612' },
-  { label: 'Total Active Days', value: '97' },
-  { label: 'Total Contests', value: '11' },
+  { label: 'Total Questions', value: '650+' },
+  { label: 'Total Active Days', value: '100+' },
+  { label: 'Total Contests', value: '10+' },
   { label: 'Global Rank', value: '#12,594' },
 ];
 

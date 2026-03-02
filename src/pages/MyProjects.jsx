@@ -4,6 +4,14 @@ import ProjectCard from '../components/ProjectCard'
 const MyProjects = () => {
   const projects = [
     {
+    title: 'SocialBazar – Social Media Marketplace',
+    image: '/socialbazar.png',
+    desc: "SocialBazar is a full-stack marketplace web application where users can buy and sell social media accounts like Instagram pages, YouTube channels, and more. It includes authentication, listings system, chat interface, user dashboard, and admin panel with transaction and withdrawal management.",
+    tech: ["React.js", "Node.js", "Express.js", "Prisma", "Clerk Auth", "Tailwind CSS"],
+    liveLink: "https://socialbazar.vercel.app/",
+    githubLink: "https://github.com/shahidansari311/Social_media_marketplace"
+    },
+    {
       title: 'Scatch – Premium Bag Shop',
       image: '/scath.png',
       desc: "Scatch is a full-stack e-commerce web application designed for selling premium bags with a smooth and secure user experience. Features include user authentication, product listings, image uploads, and admin panel.",
