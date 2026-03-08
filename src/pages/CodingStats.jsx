@@ -11,9 +11,7 @@ const STATS = {
   publicRepos: 20,
   codechefRating: 1071,
   codechefMaxRating: 1198,
-  codechefRank: '28,175',
-  lcRating: 1571,
-  lcMaxRating: 1614,
+  codechefRank: '20,817',
 };
 
 const platforms = [
