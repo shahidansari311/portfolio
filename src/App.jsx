@@ -32,7 +32,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen w-full bg-[#030712] selection:bg-indigo-500/30 overflow-x-hidden cursor-none">
+    <div className="relative min-h-screen w-full bg-black selection:bg-indigo-500/30 overflow-x-hidden cursor-none">
       {/* Scroll Progress Bar */}
       <div 
         className="fixed top-0 left-0 h-[3px] bg-linear-to-r from-indigo-500 via-purple-500 to-cyan-400 z-[200] transition-all duration-75 shadow-[0_0_10px_rgba(99,102,241,0.8)]"
@@ -42,17 +42,17 @@ const App = () => {
       {/* Dynamic Background Layer */}
       <div className="fixed inset-0 z-0">
         <div className="glow-mesh"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
         {/* Ambient Glow Orbs */}
-        <div className="glow-orb w-[600px] h-[600px] -top-32 -left-32 opacity-10" style={{ animationDelay: '0s' }}></div>
-        <div className="glow-orb w-[700px] h-[700px] top-1/2 -right-32 opacity-10" style={{ animationDelay: '2s' }}></div>
-        <div className="glow-orb w-[500px] h-[500px] -bottom-32 left-1/4 opacity-10" style={{ animationDelay: '4s' }}></div>
+        <div className="glow-orb w-[600px] h-[600px] -top-32 -left-32 opacity-5" style={{ animationDelay: '0s' }}></div>
+        <div className="glow-orb w-[700px] h-[700px] top-1/2 -right-32 opacity-5" style={{ animationDelay: '2s' }}></div>
+        <div className="glow-orb w-[500px] h-[500px] -bottom-32 left-1/4 opacity-5" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <TargetCursor />
       
-      <div className="fixed inset-0 z-[1] pointer-events-none opacity-30">
+      <div className="fixed inset-0 z-[1] pointer-events-none opacity-15">
           <Particles 
              particleColors={['#6366f1', '#a855f7', '#22d3ee']}
              particleCount={100}

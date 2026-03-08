@@ -182,8 +182,8 @@ const Otherprofiles = () => {
 
       {/* Profile marquee */}
       <div className="relative overflow-hidden py-10">
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-64 bg-linear-to-r from-[#030712] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-64 bg-linear-to-l from-[#030712] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-64 bg-linear-to-r from-black to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-64 bg-linear-to-l from-black to-transparent z-10 pointer-events-none" />
         <div className="flex gap-6 animate-scroll whitespace-nowrap px-4">
           {[...profiles, ...profiles, ...profiles].map((item, index) => (
             <Profilecard key={index} {...item} />

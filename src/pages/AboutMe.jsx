@@ -49,7 +49,7 @@ const AboutMe = () => {
                 alt="Shahid Ansari"
                 className="w-full aspect-[4/5] object-cover rounded-[40px] grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
               />
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-[#030712] via-transparent to-transparent opacity-60"></div>
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-black via-transparent to-transparent opacity-60"></div>
             </div>
           </div>
         </div>

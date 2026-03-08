@@ -37,7 +37,7 @@ const MyProjects = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-8 lg:px-0" id="project">
+    <section className="py-24 px-5 sm:px-8 lg:px-0" id="project">
       <div className="flex flex-col items-center mb-14">
         <h2 className="text-4xl md:text-5xl font-bold font-sync text-center mb-4">
           FEATURED <span className="text-gradient">PROJECTS</span>

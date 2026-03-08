@@ -4,7 +4,7 @@ import SocialLinks from '../components/Sociallinks'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center section-padding pt-32 lg:pt-0 overflow-hidden" id="home">
+    <section className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center section-padding pt-28 sm:pt-32 lg:pt-0 overflow-hidden" id="home">
       <div className="flex-1 text-center lg:text-left z-10 animate-fade-in-up">
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 glass-pill text-indigo-400 text-xs font-black tracking-[0.2em] uppercase cursor-target">
           <span className="relative flex h-2 w-2">
@@ -36,7 +36,7 @@ const Hero = () => {
           </h3>
         </div>
 
-        <p className="max-w-xl text-base md:text-lg text-slate-400 mb-12 leading-relaxed mx-auto lg:mx-0 font-medium">
+        <p className="max-w-xl text-sm sm:text-base md:text-lg text-slate-400 mb-10 md:mb-12 leading-relaxed mx-auto lg:mx-0 font-medium px-2 sm:px-0">
           I'm <span className="text-white font-bold underline decoration-indigo-500/50 underline-offset-4">Shahid Ansari</span>. Computer Science student at ABES Engineering College. 
           I engineer high-performance, scalable digital experiences with precision and passion.
         </p>
@@ -45,7 +45,7 @@ const Hero = () => {
           <SocialLinks size={24} />
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
+        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-5 w-full sm:w-auto px-2 sm:px-0">
           <button
             onClick={() => window.open("https://drive.google.com/file/d/1FDpIT94LN8apqKe12ALjekjDWQgPz84e/view?usp=sharing", "_blank")}
             className="cursor-target group relative w-full sm:w-auto px-10 py-5 bg-indigo-600 rounded-2xl font-black uppercase tracking-widest text-white transition-all duration-300 hover:bg-indigo-700 hover:scale-[1.05] active:scale-95 shadow-[0_10px_30px_-10px_rgba(99,102,241,0.5)] overflow-hidden"

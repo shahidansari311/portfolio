@@ -3,7 +3,7 @@ import SocialLinks from './Sociallinks'
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#030712] border-t border-white/5 relative overflow-hidden">
+    <footer className="w-full bg-black border-t border-white/3 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-linear-to-r from-transparent via-indigo-500/50 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
