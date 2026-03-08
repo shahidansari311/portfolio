@@ -7,6 +7,9 @@ import {
   SiDocker, SiAmazonwebservices, SiVercel, SiNetlify, SiRender,
   SiGit, SiGithub, SiPostman, SiLinux, SiNpm
 } from 'react-icons/si'
+import { SiClerk } from "react-icons/si";
+import { HiUpload } from "react-icons/hi";
+import { FaJava } from 'react-icons/fa'
 import { HiCode, HiDesktopComputer, HiServer, HiDatabase, HiCloud, HiCog, HiLightBulb } from 'react-icons/hi'
 
 const skillCategories = [
@@ -18,7 +21,7 @@ const skillCategories = [
     hoverBg: "group-hover:bg-yellow-500",
     skills: [
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "Java", icon: FaJava, color: "#3178C6" },
       { name: "Python", icon: SiPython, color: "#3776AB" },
       { name: "C++", icon: SiCplusplus, color: "#00599C" },
       { name: "C", icon: SiC, color: "#A8B9CC" },
@@ -32,7 +35,6 @@ const skillCategories = [
     hoverBg: "group-hover:bg-cyan-500",
     skills: [
       { name: "React.js", icon: SiReact, color: "#61DAFB" },
-      { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
       { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
       { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
@@ -51,10 +53,12 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#ffffff" },
-      { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+      // { name: "Supabase", icon: SiFirebase, color: "#FFCA28" },
       { name: "Socket.io", icon: SiSocketdotio, color: "#ffffff" },
       { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
       { name: "REST APIs", icon: SiNodedotjs, color: "#68A063" },
+      { name: "Clerk Auth", icon: SiClerk, color: "#6C47FF" },
+    { name: "Multer", icon: HiUpload, color: "#4CAF50" },
     ]
   },
   {

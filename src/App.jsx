@@ -7,7 +7,7 @@ import AboutMe from "./pages/AboutMe";
 import MySkills from "./pages/MySkills";
 import TechMarquee from "./components/TechMarquee";
 import MyProjects from "./pages/MyProjects";
-import Otherprofiles from "./pages/Otherprofiles";
+import CodingStats from "./pages/CodingStats";
 import Certification from "./pages/Certification";
 
 import Contact from "./pages/Contact";
@@ -77,7 +77,7 @@ const App = () => {
           <MySkills/>
           <TechMarquee />
           <MyProjects/>
-          <Otherprofiles/>
+          <CodingStats/>
           <Certification/>
 
           <Contact/>
