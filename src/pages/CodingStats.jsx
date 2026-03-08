@@ -208,12 +208,12 @@ const CodingStats = () => {
           <div className="cursor-target glass-card p-7 rounded-[32px] flex items-center justify-between group mt-4">
             <div>
               <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">CodeChef Rating</p>
-              <p className="text-4xl font-black text-orange-400 group-hover:text-orange-300 transition-colors">986</p>
+              <p className="text-4xl font-black text-orange-400 group-hover:text-orange-300 transition-colors">1075</p>
               <p className="text-[10px] text-slate-500 mt-1">max: 1198</p>
             </div>
             <div className="text-right">
               <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">Contest Rank</p>
-              <p className="text-2xl font-black text-white">Starters 224</p>
+              {/* <p className="text-2xl font-black text-white">Starters 224</p> */}
               <p className="text-[10px] text-slate-500 mt-1">Global Rank #20817</p>
             </div>
             <SiCodechef className="text-orange-400 text-5xl opacity-20 group-hover:opacity-40 transition-opacity absolute right-10" />

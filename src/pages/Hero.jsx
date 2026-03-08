@@ -63,18 +63,18 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex-1 flex justify-center lg:justify-end mt-20 lg:mt-0 relative w-full px-4 sm:px-0">
+      <div className="flex-1 flex justify-center lg:justify-end mt-20 lg:mt-0 relative w-full px-4 sm:px-0 hidden sm:block">
         <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px]">
           {/* Animated Background Orbs */}
           <div className="absolute -inset-10 bg-indigo-500/20 rounded-full blur-[100px] animate-pulse"></div>
           <div className="absolute -inset-20 bg-purple-500/10 rounded-full blur-[80px] animate-pulse delay-1000"></div>
           
-          <div className="cursor-target relative z-10 w-full h-full glass rounded-[40px] p-4 sm:p-6 transform rotate-3 hover:rotate-0 transition-all duration-700 overflow-hidden group border border-white/10 shadow-2xl">
+          <div className="cursor-target relative z-10 w-full h-full glass rounded-[40px] p-4 sm:p-6 transform rotate-3 hover:rotate-0 transition-all duration-700 overflow-hidden group border border-white/10 shadow-2xl ">
             <div className="absolute inset-0 bg-linear-to-tr from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <img 
               src="avatar.png" 
               alt="Shahid Ansari" 
-              className="w-full h-full object-cover rounded-[30px] grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" 
+              className="w-full h-full object-cover rounded-[30px] grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105 " 
             />
             <div className="absolute inset-x-0 bottom-0 h-1/4 bg-linear-to-t from-black/80 to-transparent"></div>
           </div>
