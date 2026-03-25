@@ -25,7 +25,7 @@ const Hero = () => {
               sequence={[
                 "MERN STACK ARCHITECT",
                 2000,
-                "UI/UX CRAFTSMAN",
+                "PERN STACK ARCHITECT",
                 2000,
                 "PROBLEM SOLVER",
                 2000  
