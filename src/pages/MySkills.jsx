@@ -165,11 +165,11 @@ const MySkills = () => {
               transitionSpeed={2000} 
               className="h-full"
             >
-              <div className="cursor-target h-full glass-card p-6 md:p-7 rounded-[28px] group relative overflow-hidden">
+              <div className="cursor-target glass-card rounded-[40px] overflow-hidden flex flex-col h-full group hover:bg-white/3">
                 {/* Subtle gradient glow on hover */}
-                <div className={`absolute inset-0 bg-linear-to-br ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[28px]`}></div>
+                <div className={`absolute inset-0 bg-linear-to-br ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[40px]`}></div>
                 
-                <div className="relative z-10">
+                <div className="relative z-10 p-6 md:p-8">
                   {/* Header */}
                   <div className="flex items-center gap-3 mb-5">
                     <div className={`p-3 w-11 h-11 rounded-xl bg-white/5 ${category.iconColor} text-xl flex items-center justify-center ${category.hoverBg} group-hover:text-white transition-all duration-300 transform group-hover:rotate-6`}>

@@ -1,12 +1,9 @@
 import React from 'react'
 import {TypeAnimation} from 'react-type-animation';
 import SocialLinks from '../components/Sociallinks'
-import FloatingModelsCanvas from '../components/FloatingModels'
-
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center section-padding pt-28 sm:pt-32 lg:pt-0 overflow-hidden" id="home">
-      <FloatingModelsCanvas />
       <div className="flex-1 text-center lg:text-left z-10 animate-fade-in-up">
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 glass-pill text-indigo-400 text-xs font-black tracking-[0.2em] uppercase cursor-target">
           <span className="relative flex h-2 w-2">

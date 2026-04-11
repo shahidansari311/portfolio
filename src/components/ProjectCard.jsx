@@ -10,7 +10,7 @@ const ProjectCard = ({ title, image, tech = [], desc, liveLink, githubLink }) =>
       transitionSpeed={2500}
       className="h-full"
     >
-      <div className="cursor-target glass-card rounded-[28px] overflow-hidden flex flex-col h-full group hover:bg-white/3">
+      <div className="cursor-target glass-card rounded-[40px] overflow-hidden flex flex-col h-full group hover:bg-white/3">
         {/* Image */}
         <div className="relative overflow-hidden h-48 sm:h-52">
           <img

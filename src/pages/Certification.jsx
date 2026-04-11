@@ -70,7 +70,7 @@ const Certification = () => {
               transitionSpeed={2500}
               className="h-full"
             >
-              <div className="cursor-target h-full glass-card p-8 rounded-[32px] flex flex-col items-start group relative overflow-hidden">
+              <div className="cursor-target h-full glass-card p-10 rounded-[40px] flex flex-col items-start group relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 rounded-full blur-3xl group-hover:bg-indigo-500/10 transition-all"></div>
                 
                 <div className="mb-8 p-4 rounded-2xl bg-indigo-500/10 text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">

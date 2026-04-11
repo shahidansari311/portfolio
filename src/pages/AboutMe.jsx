@@ -45,7 +45,7 @@ const AboutMe = () => {
             <div className="absolute -inset-4 bg-linear-to-r from-indigo-500 to-purple-600 rounded-[50px] blur-3xl opacity-20 group-hover:opacity-40 transition-all duration-1000"></div>
             <div className="relative glass p-4 sm:p-6 rounded-[50px] overflow-hidden transform transition-all duration-700 hover:scale-[1.02] hover:rotate-1">
               <img
-                src="myimg.jpeg"
+                src="p.png"
                 alt="Shahid Ansari"
                 className="w-full aspect-[4/5] object-cover rounded-[40px] grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
               />

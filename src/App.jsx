@@ -33,7 +33,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen w-full bg-black selection:bg-indigo-500/30 overflow-x-hidden cursor-none">
+    <div className="relative min-h-screen w-full bg-black selection:bg-indigo-500/30 overflow-x-hidden">
       {/* Scroll Progress Bar */}
       <div 
         className="fixed top-0 left-0 h-[3px] bg-linear-to-r from-indigo-500 via-purple-500 to-cyan-400 z-[200] transition-all duration-75 shadow-[0_0_10px_rgba(99,102,241,0.8)]"
@@ -51,8 +51,6 @@ const App = () => {
         <div className="glow-orb w-[500px] h-[500px] -bottom-32 left-1/4 opacity-5" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      <TargetCursor />
-      
       <div className="fixed inset-0 z-[1] pointer-events-none opacity-15">
           <Particles 
              particleColors={['#6366f1', '#a855f7', '#22d3ee']}
