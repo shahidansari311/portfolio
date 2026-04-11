@@ -7,10 +7,12 @@ import {
   SiDocker, SiAmazonwebservices, SiVercel, SiNetlify, SiRender,
   SiGit, SiGithub, SiPostman, SiLinux, SiNpm
 } from 'react-icons/si'
-import { SiClerk } from "react-icons/si";
+import { SiClerk, SiJsonwebtokens } from "react-icons/si";
 import { HiUpload } from "react-icons/hi";
 import { FaJava } from 'react-icons/fa'
 import { HiCode, HiDesktopComputer, HiServer, HiDatabase, HiCloud, HiCog, HiLightBulb } from 'react-icons/hi'
+import Tilt from 'react-parallax-tilt'
+import { motion } from 'framer-motion'
 
 const skillCategories = [
   {
@@ -53,12 +55,12 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#ffffff" },
-      // { name: "Supabase", icon: SiFirebase, color: "#FFCA28" },
+      { name: "Zustand", emoji: "🐻", color: "#443e38" },
       { name: "Socket.io", icon: SiSocketdotio, color: "#ffffff" },
       { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
-      { name: "REST APIs", icon: SiNodedotjs, color: "#68A063" },
+      { name: "JWT", icon: SiJsonwebtokens, color: "#ffffff" },
       { name: "Clerk Auth", icon: SiClerk, color: "#6C47FF" },
-    { name: "Multer", icon: HiUpload, color: "#4CAF50" },
+      { name: "Multer", icon: HiUpload, color: "#4CAF50" },
     ]
   },
   {
@@ -134,47 +136,76 @@ const MySkills = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+      <motion.div 
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.1
+            }
+          }
+        }}
+      >
         {skillCategories.map((category, index) => (
-          <div key={index} className="cursor-target glass-card p-6 md:p-7 rounded-[28px] group relative overflow-hidden">
-            {/* Subtle gradient glow on hover */}
-            <div className={`absolute inset-0 bg-linear-to-br ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[28px]`}></div>
-            
-            <div className="relative z-10">
-              {/* Header */}
-              <div className="flex items-center gap-3 mb-5">
-                <div className={`p-3 w-11 h-11 rounded-xl bg-white/5 ${category.iconColor} text-xl flex items-center justify-center ${category.hoverBg} group-hover:text-white transition-all duration-300 transform group-hover:rotate-6`}>
-                  {category.icon}
-                </div>
-                <div>
-                  <h3 className="text-base font-bold text-white tracking-tight">{category.name}</h3>
-                  <span className="text-[10px] font-bold text-slate-600">{category.skills.length} skills</span>
-                </div>
-              </div>
+          <motion.div
+            key={index}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 12 } }
+            }}
+          >
+            <Tilt 
+              tiltMaxAngleX={10} 
+              tiltMaxAngleY={10} 
+              scale={1.02} 
+              transitionSpeed={2000} 
+              className="h-full"
+            >
+              <div className="cursor-target h-full glass-card p-6 md:p-7 rounded-[28px] group relative overflow-hidden">
+                {/* Subtle gradient glow on hover */}
+                <div className={`absolute inset-0 bg-linear-to-br ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[28px]`}></div>
+                
+                <div className="relative z-10">
+                  {/* Header */}
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className={`p-3 w-11 h-11 rounded-xl bg-white/5 ${category.iconColor} text-xl flex items-center justify-center ${category.hoverBg} group-hover:text-white transition-all duration-300 transform group-hover:rotate-6`}>
+                      {category.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-base font-bold text-white tracking-tight">{category.name}</h3>
+                      <span className="text-[10px] font-bold text-slate-600">{category.skills.length} skills</span>
+                    </div>
+                  </div>
 
-              {/* Skills Grid */}
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => {
-                  const Icon = skill.icon;
-                  return (
-                    <span
-                      key={skill.name}
-                      className="cursor-target inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-semibold rounded-lg bg-white/[0.03] border border-white/[0.06] text-slate-400 hover:border-indigo-500/40 hover:bg-white/[0.06] hover:text-white transition-all duration-200"
-                    >
-                      {Icon ? (
-                        <Icon className="text-sm flex-shrink-0" style={{ color: skill.color }} />
-                      ) : (
-                        <span className="text-sm flex-shrink-0">{skill.emoji}</span>
-                      )}
-                      {skill.name}
-                    </span>
-                  );
-                })}
+                  {/* Skills Grid */}
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill) => {
+                      const Icon = skill.icon;
+                      return (
+                        <span
+                          key={skill.name}
+                          className="cursor-target inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-semibold rounded-lg bg-white/[0.03] border border-white/[0.06] text-slate-400 hover:border-indigo-500/40 hover:bg-white/[0.06] hover:text-white transition-all duration-200"
+                        >
+                          {Icon ? (
+                            <Icon className="text-sm flex-shrink-0" style={{ color: skill.color }} />
+                          ) : (
+                            <span className="text-sm flex-shrink-0">{skill.emoji}</span>
+                          )}
+                          {skill.name}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </Tilt>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

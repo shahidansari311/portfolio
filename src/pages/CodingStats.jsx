@@ -4,10 +4,10 @@ import Profilecard from '../components/Profilecard';
 
 // ---------- Configuration & Data ----------
 const STATS = {
-  totalSolved: 617,
-  activeDays: 99,
+  totalSolved: 638,
+  activeDays: 108,
   totalContests: 12,
-  globalRank: '12,613',
+  globalRank: '11,410',
   publicRepos: 20,
   codechefRating: 1071,
   codechefMaxRating: 1198,
@@ -34,19 +34,19 @@ const profiles = [
 const problemRings = [
   {
     label: 'Fundamentals',
-    total: 110,
+    total: 111,
     segments: [
       { name: 'GeeksForGeeks', count: 61, color: '#22c55e' },
-      { name: 'HackerRank', count: 49, color: '#34d399' },
+      { name: 'HackerRank', count: 50, color: '#34d399' },
     ],
   },
   {
     label: 'DSA',
-    total: 155,
+    total: 175,
     segments: [
-      { name: 'Easy', count: 115, color: '#6366f1' },
-      { name: 'Medium', count: 36, color: '#a855f7' },
-      { name: 'Hard', count: 4, color: '#ec4899' },
+      { name: 'Easy', count: 124, color: '#6366f1' },
+      { name: 'Medium', count: 48, color: '#a855f7' },
+      { name: 'Hard', count: 3, color: '#ec4899' },
     ],
   },
   {
@@ -59,16 +59,16 @@ const problemRings = [
 ];
 
 const dsaTopics = [
-  { name: 'Arrays', count: 65 },
-  { name: 'Binary Search', count: 51 },
-  { name: 'Two Pointers', count: 41 },
-  { name: 'Hash Table', count: 34 },
-  { name: 'Math', count: 31 },
-  { name: 'String', count: 30 },
-  { name: 'Sorting', count: 29 },
-  { name: 'Algorithms', count: 18 },
-  { name: 'Bit Manipulation', count: 14 },
-  { name: 'Mathematical', count: 12 },
+  { name: 'Arrays', count: 75 },
+  { name: 'Binary Search', count: 29 },
+  { name: 'String', count: 28 },
+  { name: 'Sorting', count: 25 },
+  { name: 'Hash Map and Set', count: 25 },
+  { name: 'Two Pointers', count: 24 },
+  { name: 'Math', count: 23 },
+  { name: 'Algorithms', count: 22 },
+  { name: 'Dynamic Programming', count: 9 },
+  { name: 'Bit Manipulation', count: 9 },
 ];
 
 // ---------- Sub-Components ----------
