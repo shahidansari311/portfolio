@@ -12,6 +12,8 @@ const STATS = {
   codechefRating: 1071,
   codechefMaxRating: 1198,
   codechefRank: '20,817',
+  lcRating: 1071, // fallback or dummy
+  lcMaxRating: 1198,
 };
 
 const platforms = [
@@ -151,10 +153,10 @@ const RatingGraph = () => {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex justify-between items-end">
-        <h4 className="text-[10px] font-black uppercase tracking-widest text-indigo-400">LeetCode Progress</h4>
+        <h4 className="text-[10px] font-black uppercase tracking-widest text-indigo-400">Competitive Progress</h4>
         <div className="text-right">
-          <span className="text-2xl font-black text-white">{STATS.lcRating}</span>
-          <p className="text-[8px] font-black uppercase text-slate-500">Max: {STATS.lcMaxRating}</p>
+          <span className="text-2xl font-black text-white">{STATS.codechefRating}</span>
+          <p className="text-[8px] font-black uppercase text-slate-500">Max: {STATS.codechefMaxRating}</p>
         </div>
       </div>
       <div className="h-24 w-full bg-white/5 rounded-2xl overflow-hidden relative">
@@ -198,7 +200,7 @@ const CodingStats = () => {
   const maxDsa = dsaTopics[0].count;
 
   return (
-    <section className="section-padding py-24 relative overflow-hidden bg-black" id="profiles">
+    <section className="section-padding py-24 relative overflow-hidden" id="profiles">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-indigo-500/20 to-transparent" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-600/5 blur-[120px] rounded-full -z-10" />
