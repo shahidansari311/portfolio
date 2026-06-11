@@ -1,7 +1,7 @@
 const Timeline = () => {
   const events = [
-    { year: "2024 - 2028", title: "B.Tech in CSE", place: "ABES Engineering College" },
-    { year: "2022 - 2024", title: "Intermediate", place: "Amrit Public School" },
+    { year: "2024 - 2028", title: "B.Tech in CSE — 3rd Year (6th Sem)", place: "ABES Engineering College, Ghaziabad" },
+    { year: "2022 - 2023", title: "Class XII — CBSE", place: "Amrit Public School, Mau" },
   ];
 
   return (

@@ -5,34 +5,41 @@ import { motion } from 'framer-motion'
 const MyProjects = () => {
   const projects = [
     {
-    title: 'SocialBazar – Social Media Marketplace',
-    image: '/socialbazar.png',
-    desc: "SocialBazar is a full-stack marketplace web application where users can buy and sell social media accounts like Instagram pages, YouTube channels, and more. It includes authentication, listings system, chat interface, user dashboard, and admin panel with transaction and withdrawal management.",
-    tech: ["React.js", "Node.js", "Express.js", "Prisma", "Clerk Auth", "Tailwind CSS"],
-    liveLink: "https://socialbazar.vercel.app/",
-    githubLink: "https://github.com/shahidansari311/Social_media_marketplace"
+      title: 'Bank Ledger System',
+      image: '/bank-ledger.png',
+      desc: "Production-ready RESTful Bank Ledger API built with Node.js and Express.js v5, PostgreSQL and MongoDB. Features OTP-based email verification via Nodemailer, JWT & bcrypt authentication, role-based access control, CI/CD pipeline using GitHub Actions, and deployed on AWS EC2.",
+      tech: ["Node.js", "Express.js", "PostgreSQL", "MongoDB", "JWT", "AWS EC2", "GitHub Actions"],
+      liveLink: "https://bank-ledger-5t7c.onrender.com/",
+      githubLink: "https://github.com/shahidansari311/Bank-ledger"
     },
     {
-      title: 'Scatch – Premium Bag Shop',
+      title: 'Real-Time Collaborative Code Editor',
+      image: '/realcode.png',
+      desc: "Production-grade collaborative code editor similar to Google Docs for code. Join rooms and edit code simultaneously with real-time sync powered by Yjs and WebSockets (Socket.io). Containerized with Docker multi-stage builds and deployed on AWS ECS via ECR for scalable cloud hosting.",
+      tech: ["React.js", "Node.js", "Socket.io", "Yjs", "Docker", "AWS ECS"],
+      githubLink: "https://github.com/shahidansari311/RealCode"
+    },
+    {
+      title: 'SocialBazar – Social Media Marketplace',
+      image: '/socialbazar.png',
+      desc: "Full-stack social commerce platform where users can post product listings, follow each other, interact via likes/comments, and complete peer-to-peer transactions. Built with relational PostgreSQL schema, scalable RESTful APIs with layered middleware, JWT authentication, and Zustand for global state.",
+      tech: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Zustand", "JWT"],
+      liveLink: "https://socialbazar.vercel.app/",
+      githubLink: "https://github.com/shahidansari311/Social_media_marketplace"
+    },
+    {
+      title: 'Scatch – E-Commerce Platform',
       image: '/scath.png',
-      desc: "Scatch is a full-stack e-commerce web application designed for selling premium bags with a smooth and secure user experience. Features include user authentication, product listings, image uploads, and admin panel.",
-      tech: ["Node.js", "Express.js", "MongoDB", "JWT", "Tailwind"],
+      desc: "End-to-end e-commerce web app with full merchant flow: user registration, product browsing, cart management, and order placement. Features a rich admin dashboard with product creation, image uploads (Multer), inventory control, and order tracking following MVC architecture.",
+      tech: ["Node.js", "Express.js", "MongoDB", "Multer", "EJS", "JWT"],
       liveLink: "https://scatch-8fya.onrender.com/",
       githubLink: "https://github.com/shahidansari311/Scatch"
     },
     {
-      title: 'Weather Dashboard',
-      image: '/weather.png',
-      desc: "A responsive web application providing real-time weather information and 5-day forecasts. Integrates OpenWeather API with a clean, mobile-first interface.",
-      tech: ["React", "API Handling", "Tailwind", "JavaScript"],
-      liveLink: "https://weather-app-drab-one-53.vercel.app/",
-      githubLink: "https://github.com/shahidansari311/Weather-App"
-    },
-    {
       title: 'Portfolio',
       image: '/portfolio.png',
-      desc: "Modern developer portfolio featuring advanced animations, glassmorphism, and responsive design concepts to showcase professional work and skills.",
-      tech: ["React", "GSAP", "Tailwind", "Framer"],
+      desc: "Modern developer portfolio featuring advanced animations, glassmorphism, 3D effects, and responsive design to showcase professional work, skills, and achievements.",
+      tech: ["React", "GSAP", "Tailwind", "Framer Motion", "Three.js"],
       githubLink: "https://github.com/shahidansari311/portfolio"
     }
   ];

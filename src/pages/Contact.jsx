@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
 import { useState } from "react";
@@ -9,6 +9,11 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
+  // Initialize EmailJS with public key on mount
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -17,20 +22,30 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Map form fields to EmailJS template variables
+    const templateParams = {
+      from_name: form.name,
+      from_email: form.email,
+      to_name: "Shahid Ansari",
+      message: form.message,
+      reply_to: form.email,
+    };
+
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      form,
+      templateParams,
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
-    .then(() => {
+    .then((result) => {
       setLoading(false);
       toast.success("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
+      console.log("EmailJS Success:", result.status, result.text);
     }, (error) => {
       setLoading(false);
       toast.error("Failed to send message. Please try again.");
-      console.error(error);
+      console.error("EmailJS Error:", error);
     });
   };
 

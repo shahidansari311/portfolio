@@ -10,11 +10,11 @@ const Hero = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
           </span>
-          Available for New Projects
+          Available for Internships
         </div>
         
         <h1 className="font-sync font-bold mb-4 leading-[1.1] selection:bg-indigo-500">
-          CREATIVE <br />
+          FULL STACK <br />
           <span className="text-gradient">DEVELOPER</span>
         </h1>
 
@@ -22,9 +22,11 @@ const Hero = () => {
           <h3 className="text-xl md:text-2xl lg:text-3xl font-space font-bold text-slate-500 tracking-tight">
             <TypeAnimation
               sequence={[
-                "MERN STACK ARCHITECT",
+                "MERN STACK DEVELOPER",
                 2000,
-                "PERN STACK ARCHITECT",
+                "PERN STACK DEVELOPER",
+                2000,
+                "OPEN SOURCE CONTRIBUTOR",
                 2000,
                 "PROBLEM SOLVER",
                 2000  
@@ -36,8 +38,8 @@ const Hero = () => {
         </div>
 
         <p className="max-w-xl text-sm sm:text-base md:text-lg text-slate-400 mb-10 md:mb-12 leading-relaxed mx-auto lg:mx-0 font-medium px-2 sm:px-0">
-          I'm <span className="text-white font-bold underline decoration-indigo-500/50 underline-offset-4">Shahid Ansari</span>. Computer Science student at ABES Engineering College. 
-          I engineer high-performance, scalable digital experiences with precision and passion.
+          I'm <span className="text-white font-bold underline decoration-indigo-500/50 underline-offset-4">Shahid Ansari</span>. 3rd year Computer Science student at ABES Engineering College. 
+          Full-Stack Developer with proven experience building production-ready PERN & MERN stack applications. <span className="text-indigo-400 font-semibold">GSSoC '26</span> Open Source Contributor & <span className="text-purple-400 font-semibold">AWS</span>.
         </p>
 
         <div className="mb-12 flex justify-center lg:justify-start">
@@ -46,10 +48,10 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-5 w-full sm:w-auto px-2 sm:px-0">
           <button
-            onClick={() => window.open("https://drive.google.com/file/d/1rOWRu_huC4xLk-iLqnWe18tFW9bQH_pG/view?usp=sharing", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/1BmA74QbFtKsZ2JidDUO5SsR5HfJzKhnk/view?usp=drive_link", "_blank")}
             className="cursor-target group relative w-full sm:w-auto px-10 py-5 bg-indigo-600 rounded-2xl font-black uppercase tracking-widest text-white transition-all duration-300 hover:bg-indigo-700 hover:scale-[1.05] active:scale-95 shadow-[0_10px_30px_-10px_rgba(99,102,241,0.5)] overflow-hidden"
           >
-            <span className="relative z-10">Download Resume</span>
+            <span className="relative z-10">View Resume</span>
             <div className="absolute inset-x-0 bottom-0 h-1 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
           </button>
 
@@ -80,8 +82,8 @@ const Hero = () => {
 
           {/* Decorative Elements */}
           <div className="cursor-target absolute -top-8 -right-8 glass p-6 rounded-3xl animate-float hidden md:block border border-white/10 shadow-2xl z-20" style={{ animationDelay: '2s' }}>
-            <div className="text-3xl font-black text-purple-400">24/7</div>
-            <div className="text-[10px] text-slate-500 font-black uppercase tracking-[0.2em]">Dedication</div>
+            <div className="text-3xl font-black text-purple-400">900+</div>
+            <div className="text-[10px] text-slate-500 font-black uppercase tracking-[0.2em]">Problems Solved</div>
           </div>
         </div>
       </div>

@@ -1,16 +1,17 @@
 import React from 'react'
 import {
   SiJavascript, SiTypescript, SiPython, SiCplusplus, SiC,
-  SiReact, SiNextdotjs, SiTailwindcss, SiBootstrap, SiHtml5, SiCss3, SiRedux, SiVite, SiFigma,
+  SiReact, SiNextdotjs, SiTailwindcss, SiBootstrap, SiHtml5, SiRedux, SiVite, SiFigma,
   SiNodedotjs, SiExpress, SiFirebase, SiSocketdotio, SiPrisma,
   SiMongodb, SiPostgresql, SiMysql, SiRedis, SiSupabase,
-  SiDocker, SiAmazonwebservices, SiVercel, SiNetlify, SiRender,
-  SiGit, SiGithub, SiPostman, SiLinux, SiNpm
+  SiDocker, SiVercel, SiNetlify, SiRender,
+  SiGit, SiGithub, SiPostman, SiLinux, SiNpm,
+  SiGithubactions, SiOpenai, SiLangchain
 } from 'react-icons/si'
 import { SiClerk, SiJsonwebtokens } from "react-icons/si";
 import { HiUpload } from "react-icons/hi";
-import { FaJava } from 'react-icons/fa'
-import { HiCode, HiDesktopComputer, HiServer, HiDatabase, HiCloud, HiCog, HiLightBulb } from 'react-icons/hi'
+import { FaJava, FaDatabase } from 'react-icons/fa'
+import { HiCode, HiDesktopComputer, HiServer, HiDatabase, HiCloud, HiCog, HiLightBulb, HiChip } from 'react-icons/hi'
 import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
 
@@ -27,6 +28,7 @@ const skillCategories = [
       { name: "Python", icon: SiPython, color: "#3776AB" },
       { name: "C++", icon: SiCplusplus, color: "#00599C" },
       { name: "C", icon: SiC, color: "#A8B9CC" },
+      { name: "SQL", icon: FaDatabase, color: "#4479A1" },
     ]
   },
   {
@@ -37,13 +39,13 @@ const skillCategories = [
     hoverBg: "group-hover:bg-cyan-500",
     skills: [
       { name: "React.js", icon: SiReact, color: "#61DAFB" },
+      { name: "Redux Toolkit", icon: SiRedux, color: "#764ABC" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
       { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
+      { name: "Framer Motion", emoji: "🎭" },
       { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
-      { name: "CSS3", icon: SiCss3, color: "#1572B6" },
-      { name: "Redux", icon: SiRedux, color: "#764ABC" },
+      // { name: "CSS3", icon: SiCss3, color: "#1572B6" },
       { name: "Vite", icon: SiVite, color: "#646CFF" },
-      { name: "Figma", icon: SiFigma, color: "#F24E1E" },
     ]
   },
   {
@@ -55,12 +57,13 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#ffffff" },
+      { name: "REST APIs", emoji: "🔌" },
       { name: "Zustand", emoji: "🐻", color: "#443e38" },
       { name: "Socket.io", icon: SiSocketdotio, color: "#ffffff" },
-      { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
       { name: "JWT", icon: SiJsonwebtokens, color: "#ffffff" },
-      { name: "Clerk Auth", icon: SiClerk, color: "#6C47FF" },
+      { name: "Nodemailer", emoji: "📧" },
       { name: "Multer", icon: HiUpload, color: "#4CAF50" },
+      { name: "node-cron", emoji: "⏱️" },
     ]
   },
   {
@@ -70,11 +73,23 @@ const skillCategories = [
     iconColor: "text-purple-400",
     hoverBg: "group-hover:bg-purple-500",
     skills: [
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "MySQL", icon: SiMysql, color: "#4479A1" },
       { name: "Redis", icon: SiRedis, color: "#DC382D" },
-      { name: "Supabase", icon: SiSupabase, color: "#3FCF8E" },
+      { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
+    ]
+  },
+  {
+    name: "AI / ML",
+    icon: <HiChip />,
+    color: "from-rose-500/20 to-amber-500/20",
+    iconColor: "text-rose-400",
+    hoverBg: "group-hover:bg-rose-500",
+    skills: [
+      { name: "LangChain", icon: SiLangchain, color: "#1C3C3C" },
+      { name: "LLM Integration", emoji: "🧠" },
+      { name: "OpenAI API", icon: SiOpenai, color: "#ffffff" },
     ]
   },
   {
@@ -85,9 +100,10 @@ const skillCategories = [
     hoverBg: "group-hover:bg-orange-500",
     skills: [
       { name: "Docker", icon: SiDocker, color: "#2496ED" },
-      { name: "AWS", icon: SiAmazonwebservices, color: "#FF9900" },
+      // { name: "AWS (EC2, ECS)", icon: SiAmazonwebservices, color: "#FF9900" },
+      { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
+      { name: "CI/CD", emoji: "🔄" },
       { name: "Vercel", icon: SiVercel, color: "#ffffff" },
-      { name: "Netlify", icon: SiNetlify, color: "#00C7B7" },
       { name: "Render", icon: SiRender, color: "#46E3B7" },
     ]
   },
@@ -136,7 +152,7 @@ const MySkills = () => {
         </p>
       </div>
 
-      <motion.div 
+      <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6"
         initial="hidden"
         whileInView="show"
@@ -158,17 +174,17 @@ const MySkills = () => {
               show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 12 } }
             }}
           >
-            <Tilt 
-              tiltMaxAngleX={10} 
-              tiltMaxAngleY={10} 
-              scale={1.02} 
-              transitionSpeed={2000} 
+            <Tilt
+              tiltMaxAngleX={10}
+              tiltMaxAngleY={10}
+              scale={1.02}
+              transitionSpeed={2000}
               className="h-full"
             >
               <div className="cursor-target glass-card rounded-[40px] overflow-hidden flex flex-col h-full group hover:bg-white/3">
                 {/* Subtle gradient glow on hover */}
                 <div className={`absolute inset-0 bg-linear-to-br ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[40px]`}></div>
-                
+
                 <div className="relative z-10 p-6 md:p-8">
                   {/* Header */}
                   <div className="flex items-center gap-3 mb-5">

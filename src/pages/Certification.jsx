@@ -5,10 +5,21 @@ import { motion } from 'framer-motion'
 const Certification = () => {
   const certifications = [
     {
+      title: "AWS Academy Graduate – Cloud Architecting",
+      issuer: "Amazon Web Services",
+      date: "2025",
+      link: "#",
+    },
+    {
       title: "AWS Academy Graduate – Cloud Foundations",
       issuer: "Amazon Web Services",
-      date: "Dec 2025",
+      date: "Dec 2024",
       link: "https://www.credly.com/badges/63b0fdaa-fc44-456f-8c98-96872b06f353/print",
+    },
+    {
+      title: "SQL Certificate",
+      issuer: "HackerRank",
+      link: "https://www.hackerrank.com/certificates/iframe/5f9a8f3f6a8d",
     },
     {
       title: "AWS Cloud",
@@ -46,14 +57,7 @@ const Certification = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-100px" }}
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.1
-            }
-          }
-        }}
+        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
       >
         {certifications.map((cert, index) => (
           <motion.div
@@ -63,13 +67,7 @@ const Certification = () => {
               show: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 100, damping: 12 } }
             }}
           >
-            <Tilt
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
-              scale={1.03}
-              transitionSpeed={2500}
-              className="h-full"
-            >
+            <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.03} transitionSpeed={2500} className="h-full">
               <div className="cursor-target h-full glass-card p-10 rounded-[40px] flex flex-col items-start group relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 rounded-full blur-3xl group-hover:bg-indigo-500/10 transition-all"></div>
                 

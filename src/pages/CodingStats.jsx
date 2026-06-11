@@ -4,16 +4,16 @@ import Profilecard from '../components/Profilecard';
 
 // ---------- Configuration & Data ----------
 const STATS = {
-  totalSolved: 638,
-  activeDays: 108,
-  totalContests: 12,
+  totalSolved: 750,
+  activeDays: 150,
+  totalContests: 15,
   globalRank: '11,410',
   publicRepos: 20,
-  codechefRating: 1071,
+  codechefRating: 1198,
   codechefMaxRating: 1198,
   codechefRank: '20,817',
-  lcRating: 1071, // fallback or dummy
-  lcMaxRating: 1198,
+  lcRating: 1581,
+  lcMaxRating: 1581,
 };
 
 const platforms = [
@@ -22,7 +22,7 @@ const platforms = [
   { name: 'CodeChef', icon: SiCodechef, color: 'text-orange-400', border: 'border-orange-400/20', bg: 'bg-orange-400/5', link: 'https://www.codechef.com/users/shahid_310' },
   { name: 'CodeForces', icon: SiCodeforces, color: 'text-blue-400', border: 'border-blue-400/20', bg: 'bg-blue-400/5', link: 'https://codeforces.com/' },
   { name: 'HackerRank', icon: SiHackerrank, color: 'text-emerald-400', border: 'border-emerald-400/20', bg: 'bg-emerald-400/5', link: 'https://www.hackerrank.com/profile/shahidansari310' },
-  { name: 'GitHub', icon: SiGithub, color: 'text-slate-300', border: 'border-slate-400/20', bg: 'bg-slate-400/5', link: 'https://github.com/shahidansari310' },
+  { name: 'GitHub', icon: SiGithub, color: 'text-slate-300', border: 'border-slate-400/20', bg: 'bg-slate-400/5', link: 'https://github.com/shahidansari311' },
 ];
 
 const profiles = [
@@ -36,26 +36,28 @@ const profiles = [
 const problemRings = [
   {
     label: 'Fundamentals',
-    total: 111,
+    total: 200,
     segments: [
-      { name: 'GeeksForGeeks', count: 61, color: '#22c55e' },
-      { name: 'HackerRank', count: 50, color: '#34d399' },
+      { name: 'GeeksForGeeks', count: 100, color: '#22c55e' },
+      { name: 'HackerRank', count: 100, color: '#34d399' },
     ],
   },
   {
     label: 'DSA',
-    total: 175,
+    total: 300,
     segments: [
-      { name: 'Easy', count: 124, color: '#6366f1' },
-      { name: 'Medium', count: 48, color: '#a855f7' },
-      { name: 'Hard', count: 3, color: '#ec4899' },
+      { name: 'Easy', count: 180, color: '#6366f1' },
+      { name: 'Medium', count: 100, color: '#a855f7' },
+      { name: 'Hard', count: 20, color: '#ec4899' },
     ],
   },
   {
     label: 'Competitive',
-    total: 352,
+    total: 400,
     segments: [
-      { name: 'CodeChef', count: 352, color: '#f97316' },
+      { name: 'CodeChef', count: 200, color: '#f97316' },
+      { name: 'LeetCode', count: 100, color: '#fbbf24' },
+      { name: 'Others', count: 100, color: '#60a5fa' },
     ],
   },
 ];
@@ -154,9 +156,15 @@ const RatingGraph = () => {
     <div className="flex flex-col gap-3">
       <div className="flex justify-between items-end">
         <h4 className="text-[10px] font-black uppercase tracking-widest text-indigo-400">Competitive Progress</h4>
-        <div className="text-right">
-          <span className="text-2xl font-black text-white">{STATS.codechefRating}</span>
-          <p className="text-[8px] font-black uppercase text-slate-500">Max: {STATS.codechefMaxRating}</p>
+        <div className="flex gap-4 text-right">
+          <div>
+            <span className="text-[8px] font-black uppercase text-slate-500 block">LeetCode Rating</span>
+            <span className="text-xl font-black text-yellow-500">{STATS.lcRating}</span>
+          </div>
+          <div className="border-l border-white/5 pl-4">
+            <span className="text-[8px] font-black uppercase text-slate-500 block">CodeChef Rating</span>
+            <span className="text-xl font-black text-orange-400">{STATS.codechefRating}</span>
+          </div>
         </div>
       </div>
       <div className="h-24 w-full bg-white/5 rounded-2xl overflow-hidden relative">
@@ -245,16 +253,28 @@ const CodingStats = () => {
             </div>
           </div>
 
-          {/* Middle: Rating Graph & CodeChef */}
+          {/* Middle: Rating Graph & CodeChef / LeetCode */}
           <div className="glass-card p-8 rounded-[40px] flex flex-col gap-8">
             <RatingGraph />
-            <div className="mt-auto px-5 py-5 rounded-3xl bg-orange-500/5 border border-orange-500/15 flex items-center justify-between group">
-              <div>
-                <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">CodeChef Rating</p>
-                <p className="text-4xl font-black text-orange-400">{STATS.codechefRating}</p>
-                <p className="text-[9px] text-slate-600 mt-1">Global: {STATS.codechefRank}</p>
+            <div className="mt-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* LeetCode Box */}
+              <div className="px-4 py-4 rounded-3xl bg-yellow-500/5 border border-yellow-500/15 flex items-center justify-between group">
+                <div>
+                  <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">LeetCode Rating</p>
+                  <p className="text-3xl font-black text-yellow-500">{STATS.lcRating}</p>
+                  <p className="text-[9px] text-slate-600 mt-1">Max: {STATS.lcMaxRating}</p>
+                </div>
+                <SiLeetcode className="text-4xl text-yellow-500/20 group-hover:text-yellow-500/40 transition-colors" />
               </div>
-              <SiCodechef className="text-5xl text-orange-400/20 group-hover:text-orange-400/40 transition-colors" />
+              {/* CodeChef Box */}
+              <div className="px-4 py-4 rounded-3xl bg-orange-500/5 border border-orange-500/15 flex items-center justify-between group">
+                <div>
+                  <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">CodeChef Rating</p>
+                  <p className="text-3xl font-black text-orange-400">{STATS.codechefRating}</p>
+                  <p className="text-[9px] text-slate-600 mt-1">Global: {STATS.codechefRank}</p>
+                </div>
+                <SiCodechef className="text-4xl text-orange-400/20 group-hover:text-orange-400/40 transition-colors" />
+              </div>
             </div>
           </div>
 

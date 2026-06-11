@@ -18,10 +18,10 @@ const AboutMe = () => {
             
             <div className="space-y-6 relative z-10">
               <p className="text-base md:text-lg text-slate-300 leading-loose">
-                I'm <span className="text-indigo-400 font-bold tracking-wide">Shahid Ansari</span>, a visionary Computer Science student at ABES Engineering College. My journey is defined by a relentless pursuit of engineering excellence in the digital realm.
+                I'm <span className="text-indigo-400 font-bold tracking-wide">Shahid Ansari</span>, a Full-Stack Developer and 3rd year Computer Science student at ABES Engineering College. With proven experience building production-ready applications, I've delivered <span className="text-white font-semibold">5+ complete projects</span> spanning social commerce, e-commerce, real-time collaboration, and cloud infrastructure.
               </p>
               <p className="text-base md:text-lg text-slate-300 leading-loose font-medium">
-                My core expertise lies in the <span className="text-purple-400 font-bold tracking-wide">MERN Stack</span>, where I transform sophisticated architectural concepts into robust, performant web applications that push the boundaries of what's possible.
+                My core expertise spans the <span className="text-purple-400 font-bold tracking-wide">PERN & MERN Stacks</span>, and I'm a <span className="text-green-400 font-bold">GSSoC '26 Open Source Contributor</span>, <span className="text-yellow-400 font-bold">National Hackathon Runner-Up</span> (SAH 2.0), and <span className="text-orange-400 font-bold">AWS</span> Cloud Foundation. Currently exploring LLMs, GraphQL, and AI-powered application development.
               </p>
               
               <div className="pt-8 border-t border-white/5">
@@ -30,7 +30,7 @@ const AboutMe = () => {
               </div>
 
               <div className="flex flex-wrap gap-2 mt-8">
-                {['MERN Stack', 'System Architecture', 'UI/UX Design', 'Full Stack'].map((skill) => (
+                {['MERN Stack', 'PERN Stack', 'System Architecture', 'Cloud & DevOps', 'Full Stack', 'Open Source'].map((skill) => (
                   <span key={skill} className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider bg-white/5 text-slate-400 border border-white/5 hover:border-indigo-500/30 hover:text-indigo-400 transition-all cursor-default">
                     {skill}
                   </span>
