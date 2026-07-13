@@ -48,7 +48,7 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-5 w-full sm:w-auto px-2 sm:px-0">
           <button
-            onClick={() => window.open("https://drive.google.com/file/d/1BmA74QbFtKsZ2JidDUO5SsR5HfJzKhnk/view?usp=drive_link", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/1xxqcw4z1jHIu9NaD_C-OETdYdVDAYIPK/view?usp=sharing", "_blank")}
             className="cursor-target group relative w-full sm:w-auto px-10 py-5 bg-indigo-600 rounded-2xl font-black uppercase tracking-widest text-white transition-all duration-300 hover:bg-indigo-700 hover:scale-[1.05] active:scale-95 shadow-[0_10px_30px_-10px_rgba(99,102,241,0.5)] overflow-hidden"
           >
             <span className="relative z-10">View Resume</span>
