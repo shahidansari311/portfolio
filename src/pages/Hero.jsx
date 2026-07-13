@@ -29,7 +29,9 @@ const Hero = () => {
                 "OPEN SOURCE CONTRIBUTOR",
                 2000,
                 "PROBLEM SOLVER",
-                2000  
+                2000 ,
+                "APP DEVELOPER",
+                2000   
               ]}
               speed={50}
               repeat={Infinity}
