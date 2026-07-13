@@ -6,7 +6,7 @@ import {
   SiMongodb, SiPostgresql, SiMysql, SiRedis, SiSupabase,
   SiDocker, SiVercel, SiNetlify, SiRender,
   SiGit, SiGithub, SiPostman, SiLinux, SiNpm,
-  SiGithubactions, SiOpenai, SiLangchain
+  SiGithubactions, SiOpenai, SiLangchain, SiFastapi
 } from 'react-icons/si'
 import { SiClerk, SiJsonwebtokens } from "react-icons/si";
 import { HiUpload } from "react-icons/hi";
@@ -24,6 +24,7 @@ const skillCategories = [
     hoverBg: "group-hover:bg-yellow-500",
     skills: [
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
       { name: "Java", icon: FaJava, color: "#3178C6" },
       { name: "Python", icon: SiPython, color: "#3776AB" },
       { name: "C++", icon: SiCplusplus, color: "#00599C" },
@@ -39,6 +40,7 @@ const skillCategories = [
     hoverBg: "group-hover:bg-cyan-500",
     skills: [
       { name: "React.js", icon: SiReact, color: "#61DAFB" },
+      { name: "React Native", icon: SiReact, color: "#61DAFB" }, // Using SiReact for React Native
       { name: "Redux Toolkit", icon: SiRedux, color: "#764ABC" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
       { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
@@ -57,6 +59,8 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
       { name: "Express.js", icon: SiExpress, color: "#ffffff" },
+      { name: "FastAPI", icon: SiFastapi, color: "#009688" },
+      { name: "Clerk", icon: SiClerk, color: "#6C47FF" },
       { name: "REST APIs", emoji: "🔌" },
       { name: "Zustand", emoji: "🐻", color: "#443e38" },
       { name: "Socket.io", icon: SiSocketdotio, color: "#ffffff" },
@@ -78,6 +82,7 @@ const skillCategories = [
       { name: "MySQL", icon: SiMysql, color: "#4479A1" },
       { name: "Redis", icon: SiRedis, color: "#DC382D" },
       { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
+      { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
     ]
   },
   {

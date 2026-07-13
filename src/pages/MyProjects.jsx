@@ -5,6 +5,13 @@ import { motion } from 'framer-motion'
 const MyProjects = () => {
   const projects = [
     {
+      title: 'HomeHive',
+      image: '/HomeHive.jpeg',
+      desc: "A cross-platform mobile app for real estate property listing — browse, search, and list properties, built with Expo and file-based routing.",
+      tech: ["React Native", "Expo", "TypeScript", "NativeWind", "Zustand"],
+      githubLink: "https://github.com/shahidansari311/HomeHive"
+    },
+    {
       title: 'Bank Ledger System',
       image: '/bank-ledger.png',
       desc: "Production-ready RESTful Bank Ledger API built with Node.js and Express.js v5, PostgreSQL and MongoDB. Features OTP-based email verification via Nodemailer, JWT & bcrypt authentication, role-based access control, CI/CD pipeline using GitHub Actions, and deployed on AWS EC2.",
