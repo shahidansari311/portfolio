@@ -17,7 +17,7 @@ const achievementsData = [
     organization: "ABES Engineering College",
     year: "2025",
     description: "National-Level Hackathon with 200+ teams from colleges across India. Secured 2nd place, delivering a working full-stack prototype under time constraints.",
-    color: "from-indigo-500/20 to-purple-500/20"
+    color: "from-rose-500/20 to-red-500/20"
   },
   {
     title: "KIET AI Arena – 30-Hour AI Hackathon",
@@ -25,7 +25,7 @@ const achievementsData = [
     organization: "KIET Group of Institutions",
     year: "2025",
     description: "Built an AI-Powered Interior Designer using React.js, Node.js, and LLM APIs within 30 hours. Integrated image analysis with AI for room photo analysis and customized redesign suggestions.",
-    color: "from-purple-500/20 to-pink-500/20"
+    color: "from-red-500/20 to-pink-500/20"
   },
   {
     title: "SRM IST Code Wizard 24",
@@ -33,7 +33,7 @@ const achievementsData = [
     organization: "SRM Institute of Science and Technology",
     year: "2025",
     description: "Developed a Fake News Detection System leveraging Hugging Face LLM-based perplexity scoring, Ensemble Active Learning, and NLP classification for robust cross-domain fake news identification.",
-    color: "from-cyan-500/20 to-blue-500/20"
+    color: "from-teal-500/20 to-cyan-500/20"
   }
 ];
 
@@ -45,16 +45,13 @@ const itemVariants = {
 
 const Achievements = () => {
   return (
-    <section className="section-padding py-24 relative overflow-hidden" id="achievements">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/5 blur-[120px] rounded-full -z-10" />
-      <div className="flex flex-col items-center mb-16 relative z-10">
-        <motion.div initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-          <h2 className="text-3xl md:text-5xl font-bold font-sync text-center mb-4 uppercase leading-tight">
-            MY <span className="text-gradient">ACHIEVEMENTS</span>
-          </h2>
-          <div className="w-24 h-1 bg-purple-500 rounded-full mx-auto" />
-        </motion.div>
-      </div>
+    <section className="section-padding relative overflow-hidden" id="achievements">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/5 blur-[120px] rounded-full -z-10" />
+      <div className="content-wrap">
+        <div className="section-header">
+          <h2>MY <span className="text-gradient">ACHIEVEMENTS</span></h2>
+          <div className="section-divider"></div>
+        </div>
       <motion.div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10" variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }}>
         {achievementsData.map((achievement, index) => (
           <motion.div key={index} variants={itemVariants}>
@@ -63,7 +60,7 @@ const Achievements = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -z-10" />
                 <h3 className="text-2xl font-black text-white mb-2">{achievement.title}</h3>
                 <div className="flex items-center gap-3 mb-6 flex-wrap">
-                   <span className="px-3 py-1 text-xs font-black uppercase tracking-widest bg-purple-500/20 text-purple-400 rounded-lg">{achievement.position}</span>
+                   <span className="px-3 py-1 text-xs font-black uppercase tracking-widest bg-rose-500/20 text-rose-400 rounded-lg">{achievement.position}</span>
                    <span className="text-sm font-bold text-slate-400">{achievement.year}</span>
                 </div>
                 <h4 className="text-sm font-bold text-slate-300 mb-4">{achievement.organization}</h4>
@@ -73,6 +70,7 @@ const Achievements = () => {
           </motion.div>
         ))}
       </motion.div>
+      </div>
     </section>
   );
 };

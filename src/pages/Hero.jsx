@@ -3,23 +3,24 @@ import {TypeAnimation} from 'react-type-animation';
 import SocialLinks from '../components/Sociallinks'
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center section-padding pt-28 sm:pt-32 lg:pt-0 overflow-hidden" id="home">
-      <div className="flex-1 text-center lg:text-left z-10 animate-fade-in-up">
-        <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 glass-pill text-indigo-400 text-xs font-black tracking-[0.2em] uppercase cursor-target">
+    <section className="relative min-h-screen flex items-center justify-center section-padding pt-28 md:pt-32 overflow-hidden" id="home">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-14">
+      <div className="flex-1 w-full text-center lg:text-left z-10 animate-fade-in-up">
+        <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 glass-pill text-rose-400 text-xs font-black tracking-[0.2em] uppercase cursor-target">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
           </span>
           Available for Internships
         </div>
         
-        <h1 className="font-sync font-bold mb-4 leading-[1.1] selection:bg-indigo-500">
+        <h1 className="font-sync font-bold mb-3 leading-[1.1] selection:bg-rose-500">
           FULL STACK <br />
           <span className="text-gradient">DEVELOPER</span>
         </h1>
 
-        <div className="h-16 mb-8">
-          <h3 className="text-xl md:text-2xl lg:text-3xl font-space font-bold text-slate-500 tracking-tight">
+        <div className="min-h-[3rem] mb-6">
+          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-space font-bold text-slate-500 tracking-tight leading-snug">
             <TypeAnimation
               sequence={[
                 "MERN STACK DEVELOPER",
@@ -39,19 +40,19 @@ const Hero = () => {
           </h3>
         </div>
 
-        <p className="max-w-xl text-sm sm:text-base md:text-lg text-slate-400 mb-10 md:mb-12 leading-relaxed mx-auto lg:mx-0 font-medium px-2 sm:px-0">
-          I'm <span className="text-white font-bold underline decoration-indigo-500/50 underline-offset-4">Shahid Ansari</span>. 3rd year Computer Science student at ABES Engineering College. 
-          Full-Stack Developer with proven experience building production-ready PERN & MERN stack applications. <span className="text-indigo-400 font-semibold">GSSoC '26</span> Open Source Contributor & <span className="text-purple-400 font-semibold">AWS</span>.
+        <p className="max-w-xl text-sm sm:text-base md:text-lg text-slate-400 mb-8 leading-relaxed mx-auto lg:mx-0 font-medium px-2 sm:px-0">
+          I'm <span className="text-white font-bold underline decoration-rose-500/50 underline-offset-4">Shahid Ansari</span>. 3rd year Computer Science student at ABES Engineering College. 
+          Full-Stack Developer with proven experience building production-ready PERN, MERN & React Native applications. <span className="text-rose-400 font-semibold">GSSoC '26</span> Open Source Contributor & <span className="text-red-400 font-semibold">AWS</span> Certified.
         </p>
 
-        <div className="mb-12 flex justify-center lg:justify-start">
+        <div className="mb-8 flex justify-center lg:justify-start">
           <SocialLinks size={24} />
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-5 w-full sm:w-auto px-2 sm:px-0">
           <button
             onClick={() => window.open("https://drive.google.com/file/d/1xxqcw4z1jHIu9NaD_C-OETdYdVDAYIPK/view?usp=sharing", "_blank")}
-            className="cursor-target group relative w-full sm:w-auto px-10 py-5 bg-indigo-600 rounded-2xl font-black uppercase tracking-widest text-white transition-all duration-300 hover:bg-indigo-700 hover:scale-[1.05] active:scale-95 shadow-[0_10px_30px_-10px_rgba(99,102,241,0.5)] overflow-hidden"
+            className="cursor-target group relative w-full sm:w-auto px-10 py-5 bg-rose-600 rounded-2xl font-black uppercase tracking-widest text-white transition-all duration-300 hover:bg-rose-700 hover:scale-[1.05] active:scale-95 shadow-[0_10px_30px_-10px_rgba(225,29,72,0.5)] overflow-hidden"
           >
             <span className="relative z-10">View Resume</span>
             <div className="absolute inset-x-0 bottom-0 h-1 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
@@ -59,21 +60,22 @@ const Hero = () => {
 
           <button
             onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-            className="cursor-target w-full sm:w-auto px-10 py-5 glass rounded-2xl font-black uppercase tracking-widest text-white border border-white/10 transition-all duration-300 hover:bg-white/5 hover:border-indigo-500/30 hover:scale-[1.05] active:scale-95"
+            className="cursor-target w-full sm:w-auto px-10 py-5 glass rounded-2xl font-black uppercase tracking-widest text-white border border-white/10 transition-all duration-300 hover:bg-white/5 hover:border-rose-500/30 hover:scale-[1.05] active:scale-95"
           >
             Hire Me
           </button>
         </div>
       </div>
 
-      <div className="flex-1 flex justify-center lg:justify-end mt-20 lg:mt-0 relative w-full px-4 sm:px-0 hidden sm:block">
+      {/* Avatar — hidden on phones (display:none leaves zero space), shown sm and up */}
+      <div className="hidden sm:flex flex-1 justify-center lg:justify-end relative w-full">
         <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px]">
           {/* Animated Background Orbs */}
-          <div className="absolute -inset-10 bg-indigo-500/20 rounded-full blur-[100px] animate-pulse"></div>
-          <div className="absolute -inset-20 bg-purple-500/10 rounded-full blur-[80px] animate-pulse delay-1000"></div>
+          <div className="absolute -inset-10 bg-rose-500/20 rounded-full blur-[100px] animate-pulse"></div>
+          <div className="absolute -inset-20 bg-red-500/10 rounded-full blur-[80px] animate-pulse delay-1000"></div>
           
           <div className="cursor-target relative z-10 w-full h-full glass rounded-[40px] p-4 sm:p-6 transform rotate-3 hover:rotate-0 transition-all duration-700 overflow-hidden group border border-white/10 shadow-2xl ">
-            <div className="absolute inset-0 bg-linear-to-tr from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute inset-0 bg-linear-to-tr from-rose-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <img 
               src="avatar.png" 
               alt="Shahid Ansari" 
@@ -83,11 +85,12 @@ const Hero = () => {
           </div>
 
           {/* Decorative Elements */}
-          <div className="cursor-target absolute -top-8 -right-8 glass p-6 rounded-3xl animate-float hidden md:block border border-white/10 shadow-2xl z-20" style={{ animationDelay: '2s' }}>
-            <div className="text-3xl font-black text-purple-400">900+</div>
+          <div className="cursor-target absolute -top-6 -right-4 lg:-right-6 glass p-6 rounded-3xl animate-float hidden md:block border border-white/10 shadow-2xl z-20" style={{ animationDelay: '2s' }}>
+            <div className="text-3xl font-black text-rose-400">850+</div>
             <div className="text-[10px] text-slate-500 font-black uppercase tracking-[0.2em]">Problems Solved</div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

@@ -4,13 +4,13 @@ import Profilecard from '../components/Profilecard';
 
 // ---------- Configuration & Data ----------
 const STATS = {
-  totalSolved: 750,
+  totalSolved: 850,
   activeDays: 150,
   totalContests: 15,
   globalRank: '11,410',
   publicRepos: 20,
-  codechefRating: 1198,
-  codechefMaxRating: 1198,
+  codechefRating: 1258,
+  codechefMaxRating: 1258,
   codechefRank: '20,817',
   lcRating: 1581,
   lcMaxRating: 1581,
@@ -69,10 +69,6 @@ const dsaTopics = [
   { name: 'Sorting', count: 25 },
   { name: 'Hash Map and Set', count: 25 },
   { name: 'Two Pointers', count: 24 },
-  { name: 'Math', count: 23 },
-  { name: 'Algorithms', count: 22 },
-  { name: 'Dynamic Programming', count: 9 },
-  { name: 'Bit Manipulation', count: 9 },
 ];
 
 // ---------- Sub-Components ----------
@@ -124,22 +120,22 @@ const Heatmap = () => {
   const grid = useMemo(() =>
     [...Array(84)].map((_, i) => {
       const v = (i * 13) % 7;
-      if (v === 0) return 'bg-indigo-500/90';
-      if (v === 1) return 'bg-indigo-500/55';
-      if (v === 2) return 'bg-indigo-500/25';
+      if (v === 0) return 'bg-rose-500/90';
+      if (v === 1) return 'bg-rose-500/55';
+      if (v === 2) return 'bg-rose-500/25';
       return 'bg-white/5';
     }), []);
 
   return (
     <div className="flex flex-col gap-3">
-      <h4 className="text-[10px] font-black uppercase tracking-widest text-indigo-400">Contribution Heatmap</h4>
+      <h4 className="text-[10px] font-black uppercase tracking-widest text-rose-400">Contribution Heatmap</h4>
       <div className="grid grid-cols-12 gap-1">
         {grid.map((c, i) => <div key={i} className={`aspect-square rounded-xs ${c}`} />)}
       </div>
       <div className="flex items-center justify-between text-[8px] font-black uppercase tracking-widest text-slate-600">
         <span>Less</span>
         <div className="flex gap-1">
-          {['bg-white/5', 'bg-indigo-500/25', 'bg-indigo-500/55', 'bg-indigo-500/90'].map(c => (
+          {['bg-white/5', 'bg-rose-500/25', 'bg-rose-500/55', 'bg-rose-500/90'].map(c => (
             <div key={c} className={`w-2 h-2 rounded-xs ${c}`} />
           ))}
         </div>
@@ -155,7 +151,7 @@ const RatingGraph = () => {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex justify-between items-end">
-        <h4 className="text-[10px] font-black uppercase tracking-widest text-indigo-400">Competitive Progress</h4>
+        <h4 className="text-[10px] font-black uppercase tracking-widest text-rose-400">Competitive Progress</h4>
         <div className="flex gap-4 text-right">
           <div>
             <span className="text-[8px] font-black uppercase text-slate-500 block">LeetCode Rating</span>
@@ -172,12 +168,12 @@ const RatingGraph = () => {
           <path
             d={`M ${points}`}
             fill="none" stroke="url(#graphGradient)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"
-            style={{ filter: 'drop-shadow(0 0 8px rgba(99,102,241,0.5))' }}
+            style={{ filter: 'drop-shadow(0 0 8px rgba(196,53,86,0.5))' }}
           />
           <defs>
             <linearGradient id="graphGradient" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#6366f1" />
-              <stop offset="100%" stopColor="#a855f7" />
+              <stop offset="0%" stopColor="#C43556" />
+              <stop offset="100%" stopColor="#7B182F" />
             </linearGradient>
           </defs>
         </svg>
@@ -193,11 +189,11 @@ const DsaBar = ({ name, count, max }) => {
       <span className="w-24 text-[10px] font-bold text-slate-400 text-right flex-shrink-0">{name}</span>
       <div className="flex-1 h-1.5 bg-white/5 rounded-full overflow-hidden">
         <div
-          className="h-full rounded-full bg-linear-to-r from-indigo-500 to-purple-500"
-          style={{ width: `${pct}%`, boxShadow: '0 0 6px rgba(99,102,241,0.4)' }}
+          className="h-full rounded-full bg-linear-to-r from-rose-500 to-red-500"
+          style={{ width: `${pct}%`, boxShadow: '0 0 6px rgba(244,63,94,0.4)' }}
         />
       </div>
-      <span className="w-5 text-[10px] font-black text-indigo-400">{count}</span>
+      <span className="w-5 text-[10px] font-black text-rose-400">{count}</span>
     </div>
   );
 };
@@ -208,20 +204,16 @@ const CodingStats = () => {
   const maxDsa = dsaTopics[0].count;
 
   return (
-    <section className="section-padding py-24 relative overflow-hidden" id="profiles">
+    <section className="section-padding relative overflow-hidden" id="profiles">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-indigo-500/20 to-transparent" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-600/5 blur-[120px] rounded-full -z-10" />
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-rose-500/20 to-transparent" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/5 blur-[120px] rounded-full -z-10" />
 
-      {/* Header */}
-      <div className="flex flex-col items-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold font-sync text-center mb-4 uppercase leading-tight">
-          CODING <span className="text-gradient">PROFILES</span>
-        </h2>
-        <div className="w-24 h-1 bg-indigo-500 rounded-full" />
-      </div>
-
-      <div className="max-w-7xl mx-auto">
+      <div className="content-wrap">
+        <div className="section-header">
+          <h2>CODING <span className="text-gradient">PROFILES</span></h2>
+          <div className="section-divider"></div>
+        </div>
 
         {/* KPI Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 border border-white/5 rounded-[32px] overflow-hidden mb-8 glass">
@@ -244,7 +236,7 @@ const CodingStats = () => {
           {/* Left: Heatmap & GitHub */}
           <div className="glass-card p-8 rounded-[40px] flex flex-col gap-8">
             <Heatmap />
-            <div className="mt-auto px-5 py-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4 group hover:border-indigo-500/30 transition-colors">
+            <div className="mt-auto px-5 py-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4 group hover:border-rose-500/30 transition-colors">
               <SiGithub className="text-3xl text-slate-300" />
               <div>
                 <h5 className="text-xl font-black text-white">{STATS.publicRepos}+ Repos</h5>
@@ -280,7 +272,7 @@ const CodingStats = () => {
 
           {/* Right: Rings */}
           <div className="glass-card p-8 rounded-[40px] flex flex-col justify-between">
-            <h4 className="text-[10px] font-black uppercase tracking-widest text-indigo-400 mb-6 text-center">Problem Complexity</h4>
+            <h4 className="text-[10px] font-black uppercase tracking-widest text-rose-400 mb-6 text-center">Problem Complexity</h4>
             <div className="grid grid-cols-3 gap-2">
               {problemRings.map(r => <RadialRing key={r.label} data={r} />)}
             </div>
@@ -311,8 +303,8 @@ const CodingStats = () => {
 
         {/* Profile Marquee */}
         <div className="relative overflow-hidden py-10">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-black to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-[#050e10] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-[#050e10] to-transparent z-10 pointer-events-none" />
           <div className="flex gap-6 animate-scroll whitespace-nowrap px-4 hover:[animation-play-state:paused]">
             {[...profiles, ...profiles, ...profiles].map((item, index) => (
               <Profilecard key={index} {...item} />

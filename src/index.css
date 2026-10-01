@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #6366f1;
-  --secondary: #a855f7;
-  --accent: #22d3ee;
-  --bg-dark: #000000;
+  --primary: #C43556;
+  --secondary: #7B182F;
+  --accent: #86DDE4;
+  --bg-dark: #082D36;
   --card-bg: rgba(255, 255, 255, 0.01);
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Offset for sticky headers if any */
   scrollbar-width: thin;
   scrollbar-color: var(--primary) var(--bg-dark);
 }
@@ -29,7 +30,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--bg-dark);
+  background: #050e10;
   color: #f8fafc;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -68,19 +69,19 @@ h2, h3, h4, .font-space {
 
 .glass-card:hover {
   background: rgba(15, 15, 15, 0.6);
-  border-color: rgba(99, 102, 241, 0.3);
+  border-color: rgba(196, 53, 86, 0.3);
   transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(196, 53, 86, 0.2);
 }
 
 /* Typography Enhancements */
 @utility text-gradient {
-  @apply bg-clip-text text-transparent bg-linear-to-r from-indigo-500 via-purple-500 to-cyan-400;
-  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.3));
+  @apply bg-clip-text text-transparent bg-linear-to-r from-[var(--primary)] via-[#F9CCCB] to-[var(--accent)];
+  filter: drop-shadow(0 0 10px rgba(196, 53, 86, 0.3));
 }
 
 @utility text-gradient-alt {
-  @apply bg-clip-text text-transparent bg-linear-to-br from-cyan-400 to-blue-600;
+  @apply bg-clip-text text-transparent bg-linear-to-br from-[var(--accent)] to-[var(--primary)];
 }
 
 /* Visual Candy — darker */
@@ -89,9 +90,9 @@ h2, h3, h4, .font-space {
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(at 0% 0%, hsla(253,16%,4%,1) 0, transparent 50%), 
-    radial-gradient(at 50% 0%, hsla(225,39%,15%,0.15) 0, transparent 50%), 
-    radial-gradient(at 100% 0%, hsla(339,49%,15%,0.15) 0, transparent 50%);
+    radial-gradient(at 0% 0%, hsla(347, 60%, 25%, 0.5) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(186, 75%, 20%, 0.3) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339, 49%, 15%, 0.2) 0, transparent 50%);
   filter: blur(100px);
   z-index: -1;
 }
@@ -135,16 +136,45 @@ h2, h3, h4, .font-space {
   animation: fade-in-up 0.8s ease-out forwards;
 }
 
-/* Responsiveness Improvements */
+/* Responsiveness Improvements — unified layout system */
 .section-padding {
-  @apply py-28 px-12;
+  @apply py-16 md:py-20 lg:py-24 px-5 sm:px-8 lg:px-12;
+}
+
+/* Central content container — keeps all sections aligned */
+.content-wrap {
+  @apply w-full max-w-7xl mx-auto;
+}
+
+/* Unified section headers — same spacing everywhere */
+.section-header {
+  @apply flex flex-col items-center text-center mb-10 md:mb-14;
+}
+
+.section-header h2 {
+  @apply text-3xl md:text-5xl font-bold leading-tight mb-5;
+  font-family: 'Syncopate', sans-serif;
+  letter-spacing: -0.05em;
+}
+
+.section-divider {
+  @apply w-24 h-1 bg-rose-500 rounded-full;
+}
+
+.section-subtext {
+  @apply text-slate-500 text-sm font-medium text-center max-w-md mx-auto mb-10 md:mb-12;
+}
+
+/* Anchor offset so fixed navbar never covers section titles */
+section[id] {
+  scroll-margin-top: 110px;
 }
 
 @media (max-width: 640px) {
   h1 { @apply text-3xl; }
   h2 { @apply text-2xl; }
   .section-padding {
-    @apply py-14 px-5;
+    @apply py-16 px-5;
   }
 }
 
@@ -158,6 +188,33 @@ h2, h3, h4, .font-space {
 @media (min-width: 1025px) {
   h1 { @apply text-7xl; }
   .section-padding {
-    @apply py-28 px-12;
+    @apply py-24 px-12;
   }
+}
+
+/* Proper full-site background image handling.
+   The image itself is rendered in ScrollBackground as a fixed layer;
+   these rules guarantee correct formatting + readability fallbacks. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-color: #050e10;
+  background-image: url('/bg-mobile-backend.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to bottom, rgba(5, 14, 16, 0.85) 0%, rgba(5, 14, 16, 0.7) 50%, rgba(5, 14, 16, 0.9) 100%);
+  pointer-events: none;
 }

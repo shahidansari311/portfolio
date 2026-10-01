@@ -5,6 +5,13 @@ import { motion } from 'framer-motion'
 const MyProjects = () => {
   const projects = [
     {
+      title: 'PaisaPilot',
+      image: '/PaisaPilot.png', // Fallback or assume it's in public
+      desc: "Offline-first personal finance mobile app for tracking income, expenses, budgets, group expense splitting, and a borrow/lend ledger with local SQLite storage.",
+      tech: ["React Native", "Expo", "TypeScript", "SQLite", "Zustand"],
+      githubLink: "https://github.com/shahidansari311/PaisaPilot"
+    },
+    {
       title: 'HomeHive',
       image: '/HomeHive.jpeg',
       desc: "A cross-platform mobile app for real estate property listing — browse, search, and list properties, built with Expo and file-based routing.",
@@ -14,7 +21,7 @@ const MyProjects = () => {
     {
       title: 'Bank Ledger System',
       image: '/bank-ledger.png',
-      desc: "Production-ready RESTful Bank Ledger API built with Node.js and Express.js v5, PostgreSQL and MongoDB. Features OTP-based email verification via Nodemailer, JWT & bcrypt authentication, role-based access control, CI/CD pipeline using GitHub Actions, and deployed on AWS EC2.",
+      desc: "RESTful Bank Ledger API with Node.js, Express.js v5, PostgreSQL & MongoDB. OTP email verification, JWT auth, role-based access, GitHub Actions CI/CD, deployed on AWS EC2.",
       tech: ["Node.js", "Express.js", "PostgreSQL", "MongoDB", "JWT", "AWS EC2", "GitHub Actions"],
       liveLink: "https://bank-ledger-5t7c.onrender.com/",
       githubLink: "https://github.com/shahidansari311/Bank-ledger"
@@ -22,7 +29,7 @@ const MyProjects = () => {
     {
       title: 'Real-Time Collaborative Code Editor',
       image: '/realcode.png',
-      desc: "Production-grade collaborative code editor similar to Google Docs for code. Join rooms and edit code simultaneously with real-time sync powered by Yjs and WebSockets (Socket.io). Containerized with Docker multi-stage builds and deployed on AWS ECS via ECR for scalable cloud hosting.",
+      desc: "Google-Docs-style collaborative code editor with real-time sync via Yjs + Socket.io. Dockerized multi-stage builds, deployed on AWS ECS via ECR.",
       tech: ["React.js", "Node.js", "Socket.io", "Yjs", "Docker", "AWS ECS"],
       githubLink: "https://github.com/shahidansari311/RealCode"
     },
@@ -52,12 +59,13 @@ const MyProjects = () => {
   ];
 
   return (
-    <section className="py-24 px-5 sm:px-8 lg:px-0" id="project">
+    <section className="section-padding" id="project">
+      <div className="content-wrap">
       <div className="flex flex-col items-center mb-14">
-        <h2 className="text-4xl md:text-5xl font-bold font-sync text-center mb-4">
+        <h2 className="text-3xl md:text-5xl font-bold font-sync text-center mb-5 leading-tight">
           FEATURED <span className="text-gradient">PROJECTS</span>
         </h2>
-        <div className="w-24 h-1 bg-indigo-500 rounded-full"></div>
+        <div className="w-24 h-1 bg-rose-500 rounded-full"></div>
       </div>
 
       <motion.div 
@@ -87,7 +95,7 @@ const MyProjects = () => {
         ))}
       </motion.div>
 
-      <div className="mt-16 text-center">
+      <div className="mt-14 md:mt-16 text-center">
         <a 
           href="https://github.com/shahidansari311" 
           target="_blank" 
@@ -99,6 +107,7 @@ const MyProjects = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
+      </div>
       </div>
     </section>
   )

@@ -1,68 +1,81 @@
-import React, { useEffect } from "react";
-import emailjs from "emailjs-com";
+import React, { useState } from "react";
 import toast from "react-hot-toast";
-import { useState } from "react";
 import { HiMail, HiLocationMarker } from "react-icons/hi";
 import SocialLinks from "../components/Sociallinks";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [loading, setLoading] = useState(false);
-
-  // Initialize EmailJS with public key on mount
-  useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
+  const [form, setForm] = React.useState({ name: "", email: "", message: "" });
+  const [loading, setLoading] = React.useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    // Map form fields to EmailJS template variables
-    const templateParams = {
-      from_name: form.name,
-      from_email: form.email,
-      to_name: "Shahid Ansari",
-      message: form.message,
-      reply_to: form.email,
-    };
+    const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    const isConfigured =
+      ACCESS_KEY &&
+      !["YOUR_KEY_HERE", "YOUR_WEB3FORMS_ACCESS_KEY"].includes(ACCESS_KEY);
 
-    emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      templateParams,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    )
-    .then((result) => {
-      setLoading(false);
-      toast.success("Message sent successfully!");
+    // No valid Web3Forms key configured → fall back to the visitor's email app
+    // so the message still reaches you instead of failing.
+    if (!isConfigured) {
+      const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`);
+      const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`);
+      window.location.href = `mailto:shahidansari945256@gmail.com?subject=${subject}&body=${body}`;
+      toast.success("Opening your email app to send the message!");
       setForm({ name: "", email: "", message: "" });
-      console.log("EmailJS Success:", result.status, result.text);
-    }, (error) => {
       setLoading(false);
-      toast.error("Failed to send message. Please try again.");
-      console.error("EmailJS Error:", error);
-    });
+      return;
+    }
+
+    try {
+      // Using Web3Forms for a free, backend-less solution
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        toast.success("Message sent successfully!");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        toast.error(result.message || "Failed to send message.");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <section className="section-padding py-24" id="contact">
-      <div className="flex flex-col items-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold font-sync text-center mb-4 uppercase leading-tight">
-          GET IN <span className="text-gradient">TOUCH</span>
-        </h2>
-        <div className="w-24 h-1 bg-indigo-500 rounded-full"></div>
-      </div>
+    <section className="section-padding" id="contact">
+      <div className="content-wrap">
+        <div className="section-header">
+          <h2>GET IN <span className="text-gradient">TOUCH</span></h2>
+          <div className="section-divider"></div>
+        </div>
 
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-8 order-2 lg:order-1">
             <div className="glass-card p-8 md:p-10 rounded-[40px] relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-500/20 transition-all"></div>
+              <div className="absolute top-0 left-0 w-32 h-32 bg-rose-500/10 rounded-full blur-3xl group-hover:bg-rose-500/20 transition-all"></div>
               
               <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -75,7 +88,7 @@ const Contact = () => {
                       value={form.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500/50 transition-all font-medium"
+                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-rose-500/50 transition-all font-medium"
                     />
                   </div>
                   <div className="space-y-2">
@@ -87,7 +100,7 @@ const Contact = () => {
                       value={form.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500/50 transition-all font-medium"
+                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-rose-500/50 transition-all font-medium"
                     />
                   </div>
                 </div>
@@ -100,13 +113,13 @@ const Contact = () => {
                     value={form.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500/50 transition-all font-medium resize-none"
+                    className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-rose-500/50 transition-all font-medium resize-none"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-5 rounded-2xl bg-indigo-600 text-sm font-black uppercase tracking-widest text-white hover:bg-indigo-700 transition-all shadow-[0_10px_30px_-10px_rgba(99,102,241,0.5)] active:scale-[0.98] disabled:opacity-50"
+                  className="w-full py-5 rounded-2xl bg-rose-600 text-sm font-black uppercase tracking-widest text-white hover:bg-rose-700 transition-all shadow-[0_10px_30px_-10px_rgba(244,63,94,0.5)] active:scale-[0.98] disabled:opacity-50"
                 >
                   {loading ? "Transmitting..." : "Send Message"}
                 </button>
@@ -120,7 +133,7 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex items-center gap-6 group">
-                  <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                  <div className="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-2xl group-hover:bg-rose-600 group-hover:text-white transition-all">
                     <HiMail />
                   </div>
                   <div>
@@ -130,7 +143,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center gap-6 group">
-                  <div className="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl group-hover:bg-purple-600 group-hover:text-white transition-all">
+                  <div className="w-14 h-14 rounded-2xl bg-red-500/10 text-red-400 flex items-center justify-center text-2xl group-hover:bg-red-600 group-hover:text-white transition-all">
                     <HiLocationMarker />
                   </div>
                   <div>
@@ -147,6 +160,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

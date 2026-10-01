@@ -26,7 +26,7 @@ const BackToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`cursor-target fixed bottom-8 right-8 z-[100] p-4 glass rounded-2xl text-indigo-400 border border-indigo-500/20 shadow-2xl transition-all duration-500 hover:bg-indigo-600 hover:text-white hover:scale-110 active:scale-90 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}
+      className={`cursor-target fixed bottom-8 right-8 z-[100] p-4 glass rounded-2xl text-rose-400 border border-rose-500/20 shadow-2xl transition-all duration-500 hover:bg-rose-600 hover:text-white hover:scale-110 active:scale-90 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}
     >
       <HiArrowUp size={20} />
     </button>

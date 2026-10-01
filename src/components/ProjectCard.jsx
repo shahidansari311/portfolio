@@ -25,7 +25,7 @@ const ProjectCard = ({ title, image, tech = [], desc, liveLink, githubLink }) =>
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-target absolute top-3 right-3 p-2.5 bg-white/10 backdrop-blur-xl rounded-xl text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-indigo-600 hover:scale-110 shadow-lg"
+              className="cursor-target absolute top-3 right-3 p-2.5 bg-white/10 backdrop-blur-xl rounded-xl text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-rose-600 hover:scale-110 shadow-lg"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -41,7 +41,7 @@ const ProjectCard = ({ title, image, tech = [], desc, liveLink, githubLink }) =>
             {tech.slice(0, 3).map((item, index) => (
               <span
                 key={index}
-                className="px-2.5 py-1 text-[9px] font-black uppercase tracking-widest rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/10"
+                className="px-2.5 py-1 text-[9px] font-black uppercase tracking-widest rounded-lg bg-rose-500/10 text-rose-400 border border-rose-500/10"
               >
                 {item}
               </span>
@@ -53,7 +53,7 @@ const ProjectCard = ({ title, image, tech = [], desc, liveLink, githubLink }) =>
             )}
           </div>
 
-          <h3 className="cursor-target text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors leading-tight">
+          <h3 className="cursor-target text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-rose-400 transition-colors leading-tight">
             {title}
           </h3>
 
@@ -78,7 +78,7 @@ const ProjectCard = ({ title, image, tech = [], desc, liveLink, githubLink }) =>
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-target flex-1 flex items-center justify-center gap-1.5 py-3 rounded-xl bg-indigo-600 text-[10px] font-black uppercase tracking-widest text-white hover:bg-indigo-700 transition-all shadow-[0_4px_20px_rgba(99,102,241,0.3)] active:scale-95"
+                className="cursor-target flex-1 flex items-center justify-center gap-1.5 py-3 rounded-xl bg-rose-600 text-[10px] font-black uppercase tracking-widest text-white hover:bg-rose-700 transition-all shadow-[0_4px_20px_rgba(225,29,72,0.3)] active:scale-95"
               >
                 Launch
               </a>

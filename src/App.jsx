@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Hero from "./pages/Hero";
 import { Toaster } from "react-hot-toast";
 import AboutMe from "./pages/AboutMe";
+import Experience from "./pages/Experience";
 import MySkills from "./pages/MySkills";
 import TechMarquee from "./components/TechMarquee";
 import MyProjects from "./pages/MyProjects";
@@ -12,7 +13,8 @@ import Certification from "./pages/Certification";
 import Achievements from "./pages/Achievements";
 
 import Contact from "./pages/Contact";
-import Particles from "./components/Background";
+import ScrollBackground from "./components/ScrollBackground";
+import LetterField from "./components/LetterField";
 import TargetCursor from "./components/SplashCursor";
 import SocialSidebar from "./components/SocialSidebar";
 import EmailSidebar from "./components/EmailSidebar";
@@ -33,35 +35,19 @@ const App = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen w-full bg-black selection:bg-indigo-500/30 overflow-x-hidden">
+    <div className="relative min-h-screen w-full bg-[#050e10] selection:bg-rose-500/30 overflow-x-hidden">
       {/* Scroll Progress Bar */}
       <div 
-        className="fixed top-0 left-0 h-[3px] bg-linear-to-r from-indigo-500 via-purple-500 to-cyan-400 z-[200] transition-all duration-75 shadow-[0_0_10px_rgba(99,102,241,0.8)]"
+        className="fixed top-0 left-0 h-[3px] bg-linear-to-r from-rose-500 via-red-500 to-pink-400 z-[200] transition-all duration-75 shadow-[0_0_10px_rgba(244,63,94,0.8)]"
         style={{ width: `${scrollProgress}%` }}
       ></div>
 
-      {/* Dynamic Background Layer */}
-      <div className="fixed inset-0 z-0">
-        <div className="glow-mesh"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]"></div>
-        
-        {/* Ambient Glow Orbs */}
-        <div className="glow-orb w-[600px] h-[600px] -top-32 -left-32 opacity-5" style={{ animationDelay: '0s' }}></div>
-        <div className="glow-orb w-[700px] h-[700px] top-1/2 -right-32 opacity-5" style={{ animationDelay: '2s' }}></div>
-        <div className="glow-orb w-[500px] h-[500px] -bottom-32 left-1/4 opacity-5" style={{ animationDelay: '4s' }}></div>
-      </div>
+      {/* Scroll-driven dynamic background */}
+      <ScrollBackground />
 
-      <div className="fixed inset-0 z-[1] pointer-events-none opacity-15">
-          <Particles 
-             particleColors={['#6366f1', '#a855f7', '#22d3ee']}
-             particleCount={100}
-             particleSpread={8}
-             speed={0.1}
-             particleBaseSize={80}
-             moveParticlesOnHover={true}
-             alphaParticles={true}
-             disableRotation={false}
-          />
+      {/* Full-page interactive letter field — name & stack emerge near the cursor */}
+      <div className="fixed inset-0 z-[2] pointer-events-none" aria-hidden="true">
+        <LetterField className="opacity-40 [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,black_20%,transparent_100%)]" />
       </div>
 
       <div className="relative z-10 w-full overflow-x-hidden">
@@ -70,9 +56,10 @@ const App = () => {
         <SocialSidebar />
         <EmailSidebar />
         <BackToTop />
-        <main className="max-w-[1440px] mx-auto overflow-hidden">
+        <main className="overflow-x-hidden">
           <Hero/>
           <AboutMe/>
+          <Experience/>
           <MySkills/>
           <TechMarquee />
           <MyProjects/>

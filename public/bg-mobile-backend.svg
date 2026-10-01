@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
+  <defs>
+    <radialGradient id="glowRose" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C43556" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#C43556" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowTeal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#197074" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#197074" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ambient glows -->
+  <ellipse cx="1560" cy="540" rx="420" ry="480" fill="url(#glowRose)"/>
+  <ellipse cx="320" cy="560" rx="420" ry="420" fill="url(#glowTeal)"/>
+
+  <!-- ======== BACKEND : server rack (left) ======== -->
+  <g stroke="#86DDE4" stroke-opacity="0.45" stroke-width="2">
+    <rect x="120" y="300" width="360" height="92" rx="12"/>
+    <rect x="120" y="408" width="360" height="92" rx="12"/>
+    <rect x="120" y="516" width="360" height="92" rx="12"/>
+    <!-- drive LEDs -->
+    <circle cx="152" cy="346" r="6" fill="#C43556" fill-opacity="0.7" stroke="none"/>
+    <circle cx="152" cy="454" r="6" fill="#86DDE4" fill-opacity="0.7" stroke="none"/>
+    <circle cx="152" cy="562" r="6" fill="#C43556" fill-opacity="0.7" stroke="none"/>
+    <!-- vent lines -->
+    <line x1="190" y1="332" x2="440" y2="332" stroke-opacity="0.25"/>
+    <line x1="190" y1="350" x2="440" y2="350" stroke-opacity="0.25"/>
+    <line x1="190" y1="440" x2="440" y2="440" stroke-opacity="0.25"/>
+    <line x1="190" y1="458" x2="440" y2="458" stroke-opacity="0.25"/>
+    <line x1="190" y1="548" x2="440" y2="548" stroke-opacity="0.25"/>
+    <line x1="190" y1="566" x2="440" y2="566" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- ======== BACKEND : database cylinder ======== -->
+  <g stroke="#86DDE4" stroke-opacity="0.45" stroke-width="2">
+    <path d="M140 680 h260 v120 c0 34 -58 62 -130 62 c-72 0 -130 -28 -130 -62 z"/>
+    <ellipse cx="270" cy="680" rx="130" ry="34"/>
+    <path d="M140 730 c0 34 58 62 130 62 c72 0 130 -28 130 -62" stroke-opacity="0.25"/>
+  </g>
+  <text x="270" y="770" text-anchor="middle" font-family="monospace" font-size="26" fill="#86DDE4" fill-opacity="0.5">SQL</text>
+
+  <!-- ======== MOBILE : smartphone (right) ======== -->
+  <g stroke="#C43556" stroke-opacity="0.6" stroke-width="2.5">
+    <rect x="1400" y="170" width="340" height="740" rx="48"/>
+    <line x1="1520" y1="205" x2="1620" y2="205" stroke-width="4" stroke-linecap="round"/>
+    <!-- app header bar -->
+    <rect x="1432" y="250" width="276" height="46" rx="10" stroke-opacity="0.45"/>
+    <!-- app cards -->
+    <rect x="1432" y="316" width="276" height="120" rx="14" stroke-opacity="0.45"/>
+    <rect x="1432" y="452" width="130" height="120" rx="14" stroke-opacity="0.45"/>
+    <rect x="1578" y="452" width="130" height="120" rx="14" stroke-opacity="0.45"/>
+    <rect x="1432" y="588" width="276" height="120" rx="14" stroke-opacity="0.45"/>
+    <!-- bottom nav -->
+    <circle cx="1480" cy="800" r="14" stroke-opacity="0.6"/>
+    <circle cx="1570" cy="800" r="14" fill="#C43556" fill-opacity="0.45" stroke="none"/>
+    <circle cx="1660" cy="800" r="14" stroke-opacity="0.6"/>
+    <!-- home indicator -->
+    <line x1="1520" y1="872" x2="1620" y2="872" stroke-width="4" stroke-linecap="round" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- ======== API : central code node ======== -->
+  <g>
+    <circle cx="960" cy="540" r="86" stroke="#C43556" stroke-opacity="0.55" stroke-width="2.5"/>
+    <circle cx="960" cy="540" r="64" stroke="#86DDE4" stroke-opacity="0.35" stroke-width="1.5"/>
+    <text x="960" y="556" text-anchor="middle" font-family="monospace" font-size="40" font-weight="bold" fill="#F9CCCB" fill-opacity="0.75">&lt;/&gt;</text>
+  </g>
+
+  <!-- ======== circuit connections : servers -> API -> phone ======== -->
+  <g stroke="#86DDE4" stroke-opacity="0.30" stroke-width="2" stroke-dasharray="10 8">
+    <path d="M480 346 H700 L780 540 H874"/>
+    <path d="M480 562 H680 L770 560 H874"/>
+    <path d="M1046 540 H1140 L1220 540 H1400"/>
+    <path d="M1046 500 L1180 500 L1260 320 L1400 320"/>
+    <path d="M1046 580 L1180 580 L1260 740 L1400 740"/>
+  </g>
+  <g fill="#C43556" fill-opacity="0.6">
+    <circle cx="700" cy="346" r="5"/>
+    <circle cx="680" cy="562" r="5"/>
+    <circle cx="1140" cy="540" r="5"/>
+    <circle cx="1180" cy="500" r="5"/>
+    <circle cx="1180" cy="580" r="5"/>
+  </g>
+
+  <!-- ======== floating code glyphs ======== -->
+  <g font-family="monospace" font-weight="bold">
+    <text x="640" y="220" font-size="44" fill="#C43556" fill-opacity="0.35">{ }</text>
+    <text x="1150" y="880" font-size="44" fill="#86DDE4" fill-opacity="0.35">( )</text>
+    <text x="880" y="180" font-size="34" fill="#ffffff" fill-opacity="0.18">API</text>
+    <text x="200" y="880" font-size="30" fill="#ffffff" fill-opacity="0.16">0101</text>
+    <text x="1620" y="100" font-size="30" fill="#ffffff" fill-opacity="0.16">0101</text>
+    <text x="700" y="900" font-size="34" fill="#C43556" fill-opacity="0.30">;</text>
+  </g>
+
+  <!-- ======== scattered nodes ======== -->
+  <g stroke="#ffffff" stroke-opacity="0.14" stroke-width="2">
+    <circle cx="600" cy="760" r="8"/>
+    <circle cx="1300" cy="220" r="10"/>
+    <circle cx="1050" cy="880" r="7"/>
+    <line x1="592" y1="760" x2="608" y2="760"/>
+    <line x1="600" y1="752" x2="600" y2="768"/>
+  </g>
+</svg>

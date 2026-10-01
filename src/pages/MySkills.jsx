@@ -5,7 +5,7 @@ import {
   SiNodedotjs, SiExpress, SiFirebase, SiSocketdotio, SiPrisma,
   SiMongodb, SiPostgresql, SiMysql, SiRedis, SiSupabase,
   SiDocker, SiVercel, SiNetlify, SiRender,
-  SiGit, SiGithub, SiPostman, SiLinux, SiNpm,
+  SiGit, SiGithub, SiPostman, SiLinux,
   SiGithubactions, SiOpenai, SiLangchain, SiFastapi
 } from 'react-icons/si'
 import { SiClerk, SiJsonwebtokens } from "react-icons/si";
@@ -65,9 +65,7 @@ const skillCategories = [
       { name: "Zustand", emoji: "🐻", color: "#443e38" },
       { name: "Socket.io", icon: SiSocketdotio, color: "#ffffff" },
       { name: "JWT", icon: SiJsonwebtokens, color: "#ffffff" },
-      { name: "Nodemailer", emoji: "📧" },
       { name: "Multer", icon: HiUpload, color: "#4CAF50" },
-      { name: "node-cron", emoji: "⏱️" },
     ]
   },
   {
@@ -123,39 +121,34 @@ const skillCategories = [
       { name: "GitHub", icon: SiGithub, color: "#ffffff" },
       { name: "Postman", icon: SiPostman, color: "#FF6C37" },
       { name: "Linux", icon: SiLinux, color: "#FCC624" },
-      { name: "npm", icon: SiNpm, color: "#CB3837" },
-      { name: "VS Code", emoji: "💻" },
     ]
   },
   {
     name: "Soft Skills",
     icon: <HiLightBulb />,
-    color: "from-indigo-500/20 to-violet-500/20",
-    iconColor: "text-indigo-400",
-    hoverBg: "group-hover:bg-indigo-500",
+    color: "from-rose-500/20 to-violet-500/20",
+    iconColor: "text-rose-400",
+    hoverBg: "group-hover:bg-rose-500",
     skills: [
       { name: "Problem Solving", emoji: "🧩" },
       { name: "Team Collaboration", emoji: "🤝" },
       { name: "Communication", emoji: "💬" },
       { name: "Quick Learner", emoji: "🚀" },
-      { name: "Time Management", emoji: "⏰" },
-      { name: "Leadership", emoji: "👑" },
     ]
   },
 ];
 
 const MySkills = () => {
   return (
-    <section className="section-padding py-24" id="skills">
-      <div className="flex flex-col items-center mb-14 md:mb-20">
-        <h2 className="text-3xl md:text-5xl font-bold font-sync text-center mb-4 uppercase leading-tight">
-          TECHNICAL <span className="text-gradient">STACK</span>
-        </h2>
-        <div className="w-24 h-1 bg-indigo-500 rounded-full mb-4"></div>
-        <p className="text-slate-500 text-sm font-medium text-center max-w-md">
+    <section className="section-padding" id="skills">
+      <div className="content-wrap">
+        <div className="section-header">
+          <h2>TECHNICAL <span className="text-gradient">STACK</span></h2>
+          <div className="section-divider"></div>
+        </div>
+        <p className="text-slate-500 text-sm font-medium text-center max-w-md mx-auto mb-10 md:mb-12">
           Technologies & tools I use to bring ideas to life
         </p>
-      </div>
 
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6"
@@ -209,7 +202,7 @@ const MySkills = () => {
                       return (
                         <span
                           key={skill.name}
-                          className="cursor-target inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-semibold rounded-lg bg-white/[0.03] border border-white/[0.06] text-slate-400 hover:border-indigo-500/40 hover:bg-white/[0.06] hover:text-white transition-all duration-200"
+                          className="cursor-target inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-semibold rounded-lg bg-white/[0.03] border border-white/[0.06] text-slate-400 hover:border-rose-500/40 hover:bg-white/[0.06] hover:text-white transition-all duration-200"
                         >
                           {Icon ? (
                             <Icon className="text-sm flex-shrink-0" style={{ color: skill.color }} />
@@ -227,6 +220,7 @@ const MySkills = () => {
           </motion.div>
         ))}
       </motion.div>
+      </div>
     </section>
   )
 }

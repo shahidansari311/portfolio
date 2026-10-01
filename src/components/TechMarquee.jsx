@@ -44,10 +44,10 @@ const techStack = [
 
 const TechMarquee = () => {
   return (
-    <section className="w-full py-16 overflow-hidden bg-white/[0.01] border-y border-white/3 relative">
+    <section className="w-full py-12 overflow-hidden bg-white/[0.01] border-y border-white/5 relative">
       <div className="relative max-w-[1440px] mx-auto">
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-24 md:w-64 bg-linear-to-r from-black to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-24 md:w-64 bg-linear-to-l from-black to-transparent z-10" />
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-24 md:w-64 bg-linear-to-r from-[#050e10] to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-24 md:w-64 bg-linear-to-l from-[#050e10] to-transparent z-10" />
 
         <div className="flex w-max gap-12 md:gap-24 animate-scroll px-8">
           {[...techStack, ...techStack, ...techStack].map((tech, index) => {
@@ -57,11 +57,11 @@ const TechMarquee = () => {
                 key={index}
                 className="flex flex-col items-center gap-4 min-w-[80px] md:min-w-[120px] group cursor-default"
               >
-                <div className="relative p-4 rounded-2xl bg-white/5 border border-white/5 group-hover:border-indigo-500/30 group-hover:bg-indigo-500/5 transition-all duration-500">
-                  <div className="absolute inset-0 bg-indigo-500 rounded-full blur-2xl opacity-0 group-hover:opacity-20 transition-opacity"></div>
-                  <Icon className="text-3xl md:text-5xl text-slate-500 group-hover:text-indigo-400 transition-all duration-500 transform group-hover:scale-110 group-hover:-rotate-6" />
+                <div className="relative p-4 rounded-2xl bg-white/5 border border-white/5 group-hover:border-rose-500/30 group-hover:bg-rose-500/5 transition-all duration-500">
+                  <div className="absolute inset-0 bg-rose-500 rounded-full blur-2xl opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                  <Icon className="text-3xl md:text-5xl text-slate-500 group-hover:text-rose-400 transition-all duration-500 transform group-hover:scale-110 group-hover:-rotate-6" />
                 </div>
-                <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-600 group-hover:text-indigo-300 transition-colors">
+                <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-600 group-hover:text-rose-300 transition-colors">
                   {tech.name}
                 </span>
               </div>
