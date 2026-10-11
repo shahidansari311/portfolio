@@ -1,7 +1,15 @@
 {
-  "description": "Showcases a developer's resume and GitHub projects in a stunning 3D anime-styled portfolio with smooth animations and responsive design for web and mobile.",
+  "title": "Shahid Ansari | Full-Stack Developer & Software Engineer",
+  "description": "Shahid Ansari is a Full-Stack & Mobile Developer specializing in React, React Native, Node.js, TypeScript, PostgreSQL, and modern web architectures. National Hackathon Runner-Up & Open Source Contributor.",
+  "language": "en",
+  "icons": {
+    "icon": "/me.jpeg"
+  },
+  "openGraph": {
+    "image": "https://shahidansari.vercel.app/me.jpeg"
+  },
   "robots": {
-    "index": false
+    "index": true
   },
   "accessibility": {
     "addBypassLinks": false,

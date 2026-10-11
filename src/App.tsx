@@ -33,7 +33,7 @@ const projects: Project[] = [
 ]
 
 const experience = {
-  when: 'Aug 2026 – Present', role: 'Mobile App & Full-Stack Developer', org: 'Silver Vista Property LLP · Silver Real Estate', mode: 'Freelance / Intern · Remote',
+  when: 'Aug 2026 – Present', role: 'Mobile App & Full-Stack Developer', org: 'Silver Vista Property LLP', mode: 'Freelance / Intern · Remote',
   points: [
     'Architected and delivered a role-based real estate platform spanning mobile, web, an admin dashboard and cloud, owning the full lifecycle',
     'Built the React Native + Expo + TypeScript app (NativeWind) with property search and filters by location, price, type and amenities',
@@ -291,7 +291,7 @@ export default function App() {
         <Title no="01" jp="経歴" file="about.ts">Profile</Title>
         <div className="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
           <Tilt className="reveal" max={4}><div className="blade h-full p-7 md:p-10">
-            <p className="text-lg leading-relaxed text-[#e4dcde] md:text-xl">I build production-ready applications end to end, from database design and REST APIs to polished, responsive interfaces. As a freelance developer for <span className="text-ember">Silver Real Estate</span>, I shipped a complete property platform spanning web, mobile, an admin dashboard and cloud deployment.</p>
+            <p className="text-lg leading-relaxed text-[#e4dcde] md:text-xl">I build production-ready applications end to end, from database design and REST APIs to polished, responsive interfaces. As a freelance developer for <span className="text-ember">Silver Vista Property LLP</span>, I shipped a complete property platform spanning web, mobile, an admin dashboard and cloud deployment.</p>
             <p className="mt-5 leading-relaxed text-ash">My core stacks are PERN, MERN and React Native. I'm a GSSoC '26 open source contributor and a National Hackathon Runner-Up (SAH 2.0). Right now I'm deep into LLM-powered features, AI-driven app logic and mobile development.</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="border-l-2 border-ember pl-4"><p className="font-mono text-[11px] text-ember">2024 — 2028</p><p className="font-semibold">B.Tech CSE · ABES Engineering College</p><p className="text-sm text-ash">3rd year · CGPA 8.11</p></div>
