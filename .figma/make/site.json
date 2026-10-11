@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a developer's resume and GitHub projects in a stunning 3D anime-styled portfolio with smooth animations and responsive design for web and mobile.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
